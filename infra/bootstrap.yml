@@ -1,20 +1,22 @@
 AWSTemplateFormatVersion: "2010-09-09"
+# NOTE: Keep this file ASCII-only. It is deployed by hand from Windows, where the
+# AWS CLI reads templates as cp932 and fails on UTF-8 Japanese text.
 Description: >
-  村上春樹プレイリスト - 初回に一度だけ手動で作るスタック。
-  GitHub Actions が OIDC（長期キーなし）で AWS にデプロイするためのロールを作る。
+  Haruki Murakami Playlist - one-time bootstrap stack, deployed manually.
+  Creates the role that GitHub Actions assumes via OIDC (no long-lived keys).
 
 Parameters:
   GitHubOwner:
     Type: String
-    Description: GitHub のユーザー名または Organization 名
+    Description: GitHub user or organization name
   GitHubRepo:
     Type: String
-    Description: リポジトリ名（owner を含まない）
+    Description: Repository name (without the owner)
   CreateOidcProvider:
     Type: String
     AllowedValues: ["true", "false"]
     Default: "true"
-    Description: このAWSアカウントに GitHub の OIDC プロバイダーが既にある場合は false
+    Description: Set to false if this account already has the GitHub OIDC provider
 
 Conditions:
   ShouldCreateProvider: !Equals [!Ref CreateOidcProvider, "true"]
@@ -45,7 +47,7 @@ Resources:
             Condition:
               StringEquals:
                 token.actions.githubusercontent.com:aud: sts.amazonaws.com
-                # main ブランチのワークフローだけがこのロールを使える
+                # Only workflows running on the main branch can assume this role
                 token.actions.githubusercontent.com:sub: !Sub repo:${GitHubOwner}/${GitHubRepo}:ref:refs/heads/main
       Policies:
         - PolicyName: deploy
@@ -120,5 +122,5 @@ Resources:
 
 Outputs:
   DeployRoleArn:
-    Description: GitHub リポジトリの変数 AWS_DEPLOY_ROLE_ARN に設定する値
+    Description: Set this as the GitHub repository variable AWS_DEPLOY_ROLE_ARN
     Value: !GetAtt DeployRole.Arn
