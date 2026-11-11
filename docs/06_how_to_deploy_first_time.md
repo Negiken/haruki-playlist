@@ -104,13 +104,25 @@ aws cloudformation describe-stacks --stack-name haruki-playlist `
 
 | 症状（Actions のどのステップか） | 原因と対処 |
 |---|---|
-| 「AWS 認証」で `Not authorized to perform sts:AssumeRoleWithWebIdentity` | §3 の `GitHubOwner` / `GitHubRepo` がリポジトリと一致していない（大文字小文字も区別）。直して §3 を再実行。または `main` 以外のブランチから実行している |
-| 「AWS 認証」で `role-to-assume` が空 | `AWS_DEPLOY_ROLE_ARN` を Secrets 側に登録している。**Variables** タブに登録する |
+| 「AWS 認証」で `Not authorized to perform sts:AssumeRoleWithWebIdentity` | ロールの条件と、GitHub が送ってくる識別子が一致していない。下の「GitHub が送っている識別子を調べる」で実際の値を確認し、§3 のパラメータ（`GitHubOwner` / `GitHubRepo`、大文字小文字も区別）を合わせて再実行する。`main` 以外のブランチから実行した場合もこうなる |
+| 「AWS 認証」で `Could not load credentials from any providers` | `AWS_DEPLOY_ROLE_ARN` がワークフローから見えていない。Secrets 側や「Environment variables」に登録していないか確認し、**Variables タブの「Repository variables」**に登録する |
 | 「インフラを適用」で失敗 | AWS コンソールの CloudFormation → `haruki-playlist` → イベントで、最初に失敗したリソースの理由を見る。既定 VPC が無いアカウントでは失敗する（03 §9） |
 | 初回の適用に失敗して、再実行しても `ROLLBACK_COMPLETE` で進まない | 作りかけのスタックを消してから再実行：`aws cloudformation delete-stack --stack-name haruki-playlist` |
 | 「EC2 上で配置・再起動」で失敗 | そのステップのログに EC2 側の出力（アプリの起動ログを含む）が出ている。前の版があれば自動で戻っている |
 | 「公開URLで動作確認」で失敗 | 数分待って Actions の「Re-run jobs」。続く場合は下のログ確認へ |
 | 画面は出るが、ずっと「キーワードで選曲」 | `ANTHROPIC_API_KEY` が未登録か無効。登録し直して Actions の「Run workflow」で再デプロイ。サーバーのログも確認する |
+
+### GitHub が送っている識別子を調べる
+
+GitHub の識別子は `repo:<ユーザー名>@<ユーザーID>/<リポジトリ名>@<リポジトリID>:ref:refs/heads/main` の形をしている。失敗した引き受けは CloudTrail に残るので、実際の値を確認できる（反映まで数分かかることがある）：
+
+```powershell
+aws cloudtrail lookup-events --region ap-northeast-1 --max-results 1 `
+  --lookup-attributes AttributeKey=EventName,AttributeValue=AssumeRoleWithWebIdentity `
+  --query "Events[0].Username" --output text
+```
+
+ID まで固定したい場合は、§3 のコマンドの `--parameter-overrides` に `GitHubOwnerId=<ユーザーID> GitHubRepoId=<リポジトリID>` を足す（省略時はどの ID でも一致する）。
 
 ### サーバーのログを見る
 

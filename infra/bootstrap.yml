@@ -12,6 +12,14 @@ Parameters:
   GitHubRepo:
     Type: String
     Description: Repository name (without the owner)
+  GitHubOwnerId:
+    Type: String
+    Default: "*"
+    Description: Numeric GitHub account ID of the owner ("*" matches any)
+  GitHubRepoId:
+    Type: String
+    Default: "*"
+    Description: Numeric GitHub repository ID ("*" matches any)
   CreateOidcProvider:
     Type: String
     AllowedValues: ["true", "false"]
@@ -47,8 +55,11 @@ Resources:
             Condition:
               StringEquals:
                 token.actions.githubusercontent.com:aud: sts.amazonaws.com
-                # Only workflows running on the main branch can assume this role
-                token.actions.githubusercontent.com:sub: !Sub repo:${GitHubOwner}/${GitHubRepo}:ref:refs/heads/main
+              StringLike:
+                # Only workflows running on the main branch can assume this role.
+                # GitHub's subject claim carries immutable numeric IDs:
+                #   repo:<owner>@<owner id>/<repo>@<repo id>:ref:refs/heads/main
+                token.actions.githubusercontent.com:sub: !Sub repo:${GitHubOwner}@${GitHubOwnerId}/${GitHubRepo}@${GitHubRepoId}:ref:refs/heads/main
       Policies:
         - PolicyName: deploy
           PolicyDocument:
