@@ -1,0 +1,37 @@
+name: CI
+
+# プルリクエストで実行。deploy.yml からもデプロイ前の関門として呼ばれる。
+on:
+  pull_request:
+  workflow_call:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11" # 本番（Amazon Linux 2023 の python3.11）と合わせる
+          cache: pip
+          cache-dependency-path: backend/requirements*.txt
+
+      - name: 依存パッケージ
+        run: pip install -r backend/requirements-dev.txt
+
+      - name: テスト（カタログの整合性チェックを含む）
+        working-directory: backend
+        run: pytest -q
+
+      - name: シェルスクリプトの構文チェック
+        run: bash -n scripts/remote_deploy.sh
+
+      - name: CloudFormation テンプレートの検査
+        run: |
+          pip install -q cfn-lint
+          cfn-lint infra/*.yml

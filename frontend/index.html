@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>村上春樹プレイリスト</title>
+  <meta name="description" content="いまの気分を書くと、村上春樹の小説に登場する音楽を出典つきで提案します。">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page">
+    <header class="masthead">
+      <p class="eyebrow">Haruki Murakami Playlist</p>
+      <h1>いまの気分に、<br>小説のなかの一曲を。</h1>
+      <p class="lede">気分を言葉にすると、村上春樹の作品に登場するジャズや洋楽、クラシックを、登場する場面とあわせて選びます。</p>
+    </header>
+
+    <form id="mood-form" class="composer" novalidate>
+      <label for="mood-text">いまの気分</label>
+      <textarea id="mood-text" name="text" rows="3" maxlength="500" required
+        placeholder="例）雨の日曜の午後、何もする気が起きない"></textarea>
+      <div class="chips" id="chips" aria-label="入力例">
+        <button type="button" class="chip">眠れない夜、ひとりで考えごと</button>
+        <button type="button" class="chip">仕事で疲れて、とにかく癒されたい</button>
+        <button type="button" class="chip">天気がいいので遠くまでドライブしたい</button>
+        <button type="button" class="chip">昔の恋人をふと思い出した</button>
+      </div>
+      <div class="composer-foot">
+        <span id="char-count" class="muted">0 / 500</span>
+        <button type="submit" id="submit" class="primary">曲を選んでもらう</button>
+      </div>
+    </form>
+
+    <p id="status" class="status" role="status" aria-live="polite" hidden></p>
+
+    <section id="result" class="result" hidden aria-live="polite">
+      <div class="reading">
+        <p id="mood-summary" class="mood-summary"></p>
+        <div class="reading-meta">
+          <span id="mood-tags" class="tags"></span>
+          <span id="engine" class="muted"></span>
+        </div>
+      </div>
+      <ol id="songs" class="songs"></ol>
+    </section>
+
+    <footer class="colophon">
+      <details>
+        <summary>収録している作品</summary>
+        <ul id="works" class="works"></ul>
+      </details>
+      <p class="muted">曲と場面の情報は公開されている資料をもとにまとめたもので、小説本文の引用ではありません。「要確認」と付いた曲は、曲名や場面を出典で確認しきれていないものです。</p>
+    </footer>
+  </main>
+
+  <template id="song-template">
+    <li class="song">
+      <div class="song-head">
+        <h2 class="song-title"></h2>
+        <span class="genre"></span>
+      </div>
+      <p class="song-artist"></p>
+      <p class="song-reason"></p>
+      <dl class="provenance">
+        <dt>出典</dt>
+        <dd class="song-work"></dd>
+        <dt>場面</dt>
+        <dd class="song-scene"></dd>
+      </dl>
+      <p class="song-links">
+        <a class="listen" target="_blank" rel="noopener noreferrer">YouTubeで探す</a>
+        <a class="source" target="_blank" rel="noopener noreferrer">情報の出典</a>
+        <span class="unverified" hidden>要確認</span>
+      </p>
+    </li>
+  </template>
+
+  <script src="app.js" defer></script>
+</body>
+</html>

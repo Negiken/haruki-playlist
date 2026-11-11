@@ -1,0 +1,155 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: >
+  村上春樹プレイリスト - アプリ本体。GitHub Actions が毎回のデプロイで適用する。
+  閲覧者 -> CloudFront (HTTPS) -> EC2 :8080 (FastAPI が API と静的ファイルを配信)。
+  サーバーの中身のセットアップは scripts/remote_deploy.sh が行う（UserData は使わない）。
+
+Parameters:
+  InstanceType:
+    Type: String
+    Default: t4g.micro
+  LatestAmiId:
+    Type: AWS::SSM::Parameter::Value<AWS::EC2::Image::Id>
+    Default: /aws/service/ami-amazon-linux-latest/al2023-ami-kernel-default-arm64
+  CloudFrontPrefixListId:
+    Type: String
+    Description: >
+      マネージドプレフィックスリスト com.amazonaws.global.cloudfront.origin-facing のID。
+      リージョンごとに違うため、デプロイのワークフローが調べて渡す。
+
+Conditions:
+  IsUsEast1: !Equals [!Ref "AWS::Region", us-east-1]
+
+Resources:
+  # ---- デプロイ成果物の置き場 ----
+  ArtifactBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: !Sub haruki-playlist-artifacts-${AWS::AccountId}-${AWS::Region}
+      PublicAccessBlockConfiguration:
+        BlockPublicAcls: true
+        BlockPublicPolicy: true
+        IgnorePublicAcls: true
+        RestrictPublicBuckets: true
+      BucketEncryption:
+        ServerSideEncryptionConfiguration:
+          - ServerSideEncryptionByDefault: { SSEAlgorithm: AES256 }
+      LifecycleConfiguration:
+        Rules:
+          - Id: expire-old-releases
+            Status: Enabled
+            ExpirationInDays: 30
+
+  # ---- EC2 ----
+  AppRole:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: haruki-playlist-app
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Effect: Allow
+            Principal: { Service: ec2.amazonaws.com }
+            Action: sts:AssumeRole
+      ManagedPolicyArns:
+        # SSH鍵を持たず、Systems Manager 経由でデプロイ・ログインする
+        - arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore
+      Policies:
+        - PolicyName: app
+          PolicyDocument:
+            Version: "2012-10-17"
+            Statement:
+              - Effect: Allow
+                Action: s3:GetObject
+                Resource: !Sub ${ArtifactBucket.Arn}/releases/*
+              - Effect: Allow
+                Action: ssm:GetParameter
+                Resource: !Sub arn:aws:ssm:${AWS::Region}:${AWS::AccountId}:parameter/haruki-playlist/*
+
+  AppInstanceProfile:
+    Type: AWS::IAM::InstanceProfile
+    Properties:
+      InstanceProfileName: haruki-playlist-app
+      Roles: [!Ref AppRole]
+
+  AppSecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: haruki-playlist - allow app port from CloudFront only
+      SecurityGroupIngress:
+        - IpProtocol: tcp
+          FromPort: 8080
+          ToPort: 8080
+          SourcePrefixListId: !Ref CloudFrontPrefixListId
+          Description: CloudFront origin-facing
+
+  AppInstance:
+    Type: AWS::EC2::Instance
+    Properties:
+      ImageId: !Ref LatestAmiId
+      InstanceType: !Ref InstanceType
+      IamInstanceProfile: !Ref AppInstanceProfile
+      SecurityGroupIds: [!GetAtt AppSecurityGroup.GroupId]
+      MetadataOptions:
+        HttpTokens: required
+      BlockDeviceMappings:
+        - DeviceName: /dev/xvda
+          Ebs: { VolumeSize: 8, VolumeType: gp3, Encrypted: true }
+      Tags:
+        - { Key: Name, Value: haruki-playlist }
+
+  # 停止・再作成してもオリジンのホスト名が変わらないようにする
+  AppEip:
+    Type: AWS::EC2::EIP
+    Properties:
+      Domain: vpc
+      InstanceId: !Ref AppInstance
+
+  # ---- CloudFront ----
+  Distribution:
+    Type: AWS::CloudFront::Distribution
+    Properties:
+      DistributionConfig:
+        Enabled: true
+        Comment: haruki-playlist
+        HttpVersion: http2and3
+        PriceClass: PriceClass_200
+        Origins:
+          - Id: app
+            # Elastic IP のパブリックDNS名（ec2-203-0-113-10.<region>.compute.amazonaws.com）
+            DomainName: !Sub
+              - ec2-${DashedIp}.${Suffix}
+              - DashedIp: !Join ["-", !Split [".", !GetAtt AppEip.PublicIp]]
+                Suffix: !If
+                  - IsUsEast1
+                  - compute-1.amazonaws.com
+                  - !Sub ${AWS::Region}.compute.amazonaws.com
+            CustomOriginConfig:
+              OriginProtocolPolicy: http-only
+              HTTPPort: 8080
+              OriginReadTimeout: 60
+        DefaultCacheBehavior:
+          # 静的ファイル（HTML/CSS/JS）。デプロイのたびにキャッシュを無効化する
+          TargetOriginId: app
+          ViewerProtocolPolicy: redirect-to-https
+          Compress: true
+          AllowedMethods: [GET, HEAD]
+          CachePolicyId: 658327ea-f89d-4fab-a63d-7e88639e58f6 # Managed-CachingOptimized
+        CacheBehaviors:
+          - PathPattern: /api/*
+            TargetOriginId: app
+            ViewerProtocolPolicy: redirect-to-https
+            Compress: true
+            AllowedMethods: [GET, HEAD, OPTIONS, PUT, PATCH, POST, DELETE]
+            CachePolicyId: 4135ea2d-6df8-44a3-9df3-4b5a84be39ad # Managed-CachingDisabled
+            OriginRequestPolicyId: b689b0a8-53d0-40ab-baf2-68738e2966ac # Managed-AllViewerExceptHostHeader
+
+Outputs:
+  SiteUrl:
+    Value: !Sub https://${Distribution.DomainName}
+  DistributionId:
+    Value: !Ref Distribution
+  InstanceId:
+    Value: !Ref AppInstance
+  ArtifactBucketName:
+    Value: !Ref ArtifactBucket
