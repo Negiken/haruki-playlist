@@ -32,9 +32,10 @@ def test_recommendations_with_rules(client):
     assert res.status_code == 200
     body = res.json()
     assert body["engine"] == "rules"
-    assert len(body["songs"]) == 5
+    assert len(body["songs"]) == 1  # 既定は一曲だけ
     assert body["mood"]["tags"]
     song = body["songs"][0]
+    assert {"artwork_url", "apple_url"} <= song.keys() and "cover_url" in song["work"]
     assert song["work"]["title"] and song["scene"] and song["reason"]
     assert song["source_url"].startswith("https://")
     assert song["listen_url"].startswith("https://www.youtube.com/results?search_query=")

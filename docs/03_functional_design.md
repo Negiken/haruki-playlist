@@ -91,7 +91,8 @@ POST /api/recommendations {text}
 │   ├── data/
 │   │   ├── songs.json                 曲カタログ
 │   │   ├── works.json                 対象 12 作品
-│   │   └── moods.json                 気分の語彙とキーワード
+│   │   ├── moods.json                 気分の語彙とキーワード
+│   │   └── artwork.json               書影とジャケットの画像URL（無くても動く）
 │   ├── tests/
 │   ├── requirements.txt               本番用
 │   └── requirements-dev.txt           テスト用を追加
@@ -103,7 +104,8 @@ POST /api/recommendations {text}
 │   ├── bootstrap.yml                  初回に手動で 1 回だけ作る（GitHub 用ロール）
 │   └── app.yml                        毎回のデプロイで適用（EC2・CloudFront・S3）
 ├── scripts/
-│   └── remote_deploy.sh               EC2 の中で動く配置スクリプト
+│   ├── remote_deploy.sh               EC2 の中で動く配置スクリプト
+│   └── fetch_artwork.py               ジャケット画像の候補を探す（手元で実行する道具）
 ├── .github/workflows/
 │   ├── ci.yml                         テスト
 │   └── deploy.yml                     テスト → デプロイ
@@ -118,6 +120,7 @@ POST /api/recommendations {text}
 | Claude への指示文を変える | `mood/claude.py` の `INSTRUCTIONS` |
 | 上限値を変える | 環境変数（§5.3）。既定値は `config.py` |
 | 画面の文言・見た目 | `frontend/` |
+| 書影・ジャケットを足す・直す | `backend/data/artwork.json`（§3.5） |
 | AWS の構成 | `infra/app.yml` |
 | サーバー内の設定（systemd など） | `scripts/remote_deploy.sh` |
 
@@ -144,7 +147,7 @@ POST /api/recommendations {text}
 
 ### 3.2 作品（`works.json`）
 
-`key` / `title` / `year` / `kind`（長編・短編集）/ `source_url`（その作品の曲情報の主な出典）。
+`key` / `title` / `year` / `kind`（長編・短編集）/ `source_url`（その作品の曲情報の主な出典）。書影は §3.5。
 
 ### 3.3 曲（`songs.json`）
 
@@ -181,6 +184,31 @@ POST /api/recommendations {text}
 `load_catalog()` は次のいずれかで `CatalogError` を出し、**アプリを起動させない**：ID の重複／未定義の作品／未定義または空の気分タグ／不正なジャンル・確認状態／必須項目が空／曲が 0 件。
 
 同じチェックが CI のテストで走るので、壊れたデータは本番に届く前に止まる。
+
+### 3.5 画像（`artwork.json`）
+
+画像ファイルは持たず、外部サイトの画像 URL だけを記録する。画面はそこから直接読み込む。
+
+```json
+{
+  "works": { "kafka": { "cover_url": "https://covers.openlibrary.org/b/id/13485790-L.jpg", "edition": "新潮社 単行本（上）" } },
+  "songs": {
+    "kafka-kid-a": { "artwork_url": "https://…mzstatic.com/…/600x600bb.jpg", "apple_url": "https://music.apple.com/jp/album/…", "matched": "Kid A — レディオヘッド（Kid A）" },
+    "after-dark-more": null
+  }
+}
+```
+
+| 種類 | 提供元 | 決め方 |
+|---|---|---|
+| 書影（`works`） | Open Library の表紙画像 | 手で選ぶ。日本語版が無い作品は英語版、それも無ければ載せない |
+| ジャケット（`songs`） | iTunes Search API（Apple Music） | `scripts/fetch_artwork.py` が候補を入れ、`matched` を目で見て直す |
+
+* `edition` / `matched` は人が確認するためのメモで、画面には出ない。
+* 値が `null` の曲は「合う画像が無い」と確認済みの印。スクリプトも再検索しない。
+* 画像が無い・読み込めないときは、文字だけのジャケット／表紙を表示する（画面が欠けることはない）。
+* `load_catalog()` は、未定義の作品・曲の key と、`https://` で始まらない URL を `CatalogError` にする。
+* カタログ上の演奏者と違う演奏のジャケットは載せない（民謡・スタンダードなど演奏者を特定しない曲は `null`）。
 
 ### 3.5 実行時モデル（`domain/models.py`）
 
@@ -277,7 +305,7 @@ recommend():
 
 | メソッド・パス | 内容 |
 |---|---|
-| `POST /api/recommendations` | 本体。`{"text": "…", "count": 5}`（`count` は 1〜8、省略時 5） |
+| `POST /api/recommendations` | 本体。`{"text": "…", "count": 1}`（`count` は 1〜8、省略時 1。画面は常に 1 曲） |
 | `GET /api/works` | 収録作品の一覧と曲数（刊行年順） |
 | `GET /api/health` | `{"status","version","songs","llm_enabled"}`。デプロイの動作確認に使う |
 | `GET /*` | `frontend/` の静的ファイル |

@@ -4,76 +4,106 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>村上春樹プレイリスト</title>
-  <meta name="description" content="いまの気分を書くと、村上春樹の小説に登場する音楽を出典つきで提案します。">
+  <meta name="description" content="いまの気分を書くと、村上春樹の小説に登場する音楽から一曲だけ選びます。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600&family=Shippori+Mincho:wght@400;500;600&display=swap">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <main class="page">
-    <header class="masthead">
-      <p class="eyebrow">Haruki Murakami Playlist</p>
-      <h1>いまの気分に、<br>小説のなかの一曲を。</h1>
-      <p class="lede">気分を言葉にすると、村上春樹の作品に登場するジャズや洋楽、クラシックを、登場する場面とあわせて選びます。</p>
-    </header>
+  <div class="grooves" aria-hidden="true"></div>
 
-    <form id="mood-form" class="composer" novalidate>
-      <label for="mood-text">いまの気分</label>
-      <textarea id="mood-text" name="text" rows="3" maxlength="500" required
-        placeholder="例）雨の日曜の午後、何もする気が起きない"></textarea>
-      <div class="chips" id="chips" aria-label="入力例">
-        <button type="button" class="chip">眠れない夜、ひとりで考えごと</button>
-        <button type="button" class="chip">仕事で疲れて、とにかく癒されたい</button>
-        <button type="button" class="chip">天気がいいので遠くまでドライブしたい</button>
-        <button type="button" class="chip">昔の恋人をふと思い出した</button>
-      </div>
-      <div class="composer-foot">
-        <span id="char-count" class="muted">0 / 500</span>
-        <button type="submit" id="submit" class="primary">曲を選んでもらう</button>
-      </div>
-    </form>
+  <header class="top">
+    <p class="wordmark" lang="en">Haruki Murakami Playlist</p>
+    <p class="side"><span lang="en" id="side-letter">Side A</span><span id="side-name">気分</span></p>
+  </header>
 
-    <p id="status" class="status" role="status" aria-live="polite" hidden></p>
+  <main>
+    <!-- A面: 気分を書く -->
+    <section id="ask" class="ask">
+      <h1>いまの気分を、<br>聞かせてください。</h1>
+      <p class="lede">小説のなかで鳴っていた音楽から、一曲だけ選びます。</p>
 
-    <section id="result" class="result" hidden aria-live="polite">
-      <div class="reading">
-        <p id="mood-summary" class="mood-summary"></p>
-        <div class="reading-meta">
-          <span id="mood-tags" class="tags"></span>
-          <span id="engine" class="muted"></span>
+      <form id="mood-form" novalidate>
+        <label class="visually-hidden" for="mood-text">いまの気分</label>
+        <textarea id="mood-text" name="text" rows="1" maxlength="500" enterkeyhint="send"
+          placeholder="雨の日曜の午後、何もする気が起きない"></textarea>
+        <div class="form-foot">
+          <p id="status" class="status" role="status" aria-live="polite"></p>
+          <button type="submit" id="submit" class="go">
+            <span>一曲えらぶ</span>
+            <svg viewBox="0 0 20 20" width="16" height="16" aria-hidden="true"><path d="M3 10h13M11 5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
         </div>
-      </div>
-      <ol id="songs" class="songs"></ol>
+      </form>
+
+      <p class="examples" id="examples">
+        <span class="examples-label">たとえば</span>
+        <button type="button">眠れない夜、ひとりで考えごと</button>
+        <button type="button">仕事で疲れて、とにかく癒されたい</button>
+        <button type="button">天気がいいので遠くまでドライブしたい</button>
+        <button type="button">昔の恋人をふと思い出した</button>
+      </p>
     </section>
 
-    <footer class="colophon">
-      <details>
-        <summary>収録している作品</summary>
-        <ul id="works" class="works"></ul>
-      </details>
-      <p class="muted">曲と場面の情報は公開されている資料をもとにまとめたもので、小説本文の引用ではありません。「要確認」と付いた曲は、曲名や場面を出典で確認しきれていないものです。</p>
-    </footer>
+    <!-- B面: 一曲 -->
+    <section id="answer" class="answer" hidden>
+      <p class="quote" id="quote"></p>
+
+      <article class="record">
+        <div class="visual">
+          <div class="disc" aria-hidden="true"><div class="disc-face"></div></div>
+          <div class="sleeve" id="sleeve">
+            <div class="sleeve-type" aria-hidden="true" lang="en">
+              <span id="sleeve-artist"></span>
+              <span id="sleeve-title"></span>
+            </div>
+            <img id="artwork" alt="">
+          </div>
+        </div>
+
+        <div class="notes">
+          <p class="genre" id="genre"></p>
+          <h2 id="song-title"></h2>
+          <p class="byline"><span id="song-original" lang="en"></span><span id="song-artist"></span></p>
+
+          <div class="source">
+            <div class="book" id="book">
+              <div class="book-type" aria-hidden="true">
+                <span id="book-title"></span>
+                <span class="book-author">村上春樹</span>
+              </div>
+              <img id="cover" alt="">
+            </div>
+            <div>
+              <p class="source-label">この曲が流れる小説</p>
+              <p class="work" id="song-work"></p>
+              <p class="scene" id="song-scene"></p>
+            </div>
+          </div>
+
+          <p class="links">
+            <a id="listen" target="_blank" rel="noopener noreferrer">YouTubeで探す</a>
+            <a id="apple" target="_blank" rel="noopener noreferrer" hidden>Apple Musicで聴く</a>
+            <a id="source" target="_blank" rel="noopener noreferrer">情報の出典</a>
+            <span class="unverified" id="unverified" hidden>場面は要確認</span>
+          </p>
+        </div>
+      </article>
+
+      <div class="again">
+        <button type="button" id="again" class="go ghost">
+          <svg viewBox="0 0 20 20" width="16" height="16" aria-hidden="true"><path d="M17 10H4M9 5l-5 5 5 5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>別の気分で、もう一曲</span>
+        </button>
+      </div>
+    </section>
   </main>
 
-  <template id="song-template">
-    <li class="song">
-      <div class="song-head">
-        <h2 class="song-title"></h2>
-        <span class="genre"></span>
-      </div>
-      <p class="song-artist"></p>
-      <p class="song-reason"></p>
-      <dl class="provenance">
-        <dt>出典</dt>
-        <dd class="song-work"></dd>
-        <dt>場面</dt>
-        <dd class="song-scene"></dd>
-      </dl>
-      <p class="song-links">
-        <a class="listen" target="_blank" rel="noopener noreferrer">YouTubeで探す</a>
-        <a class="source" target="_blank" rel="noopener noreferrer">情報の出典</a>
-        <span class="unverified" hidden>要確認</span>
-      </p>
-    </li>
-  </template>
+  <footer class="colophon">
+    <p>曲と場面の情報は公開されている資料をもとにまとめたもので、小説本文の引用ではありません。</p>
+    <p>書影: <a href="https://openlibrary.org/" target="_blank" rel="noopener noreferrer">Open Library</a>　ジャケット: Apple Music</p>
+  </footer>
 
   <script src="app.js" defer></script>
 </body>

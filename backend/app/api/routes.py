@@ -48,7 +48,7 @@ def build_router(
         counts = Counter(s.work.key for s in catalog.songs)
         return [
             WorkSummary(
-                key=w.key, title=w.title, year=w.year, kind=w.kind,
+                key=w.key, title=w.title, year=w.year, kind=w.kind, cover_url=w.cover_url,
                 song_count=counts[w.key], source_url=w.source_url,
             )
             for w in sorted(catalog.works.values(), key=lambda w: w.year)

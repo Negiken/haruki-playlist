@@ -10,7 +10,7 @@ from ..catalog.repository import Catalog
 from ..domain.models import Recommendation, RecommendationResult
 
 MAX_TEXT_CHARS = 500
-DEFAULT_COUNT = 5
+DEFAULT_COUNT = 1  # 画面は一度に一曲だけ出す
 MAX_COUNT = 8
 
 
@@ -32,6 +32,7 @@ class WorkOut(BaseModel):
     title: str
     year: int
     kind: str
+    cover_url: str | None
 
 
 class SongOut(BaseModel):
@@ -47,6 +48,8 @@ class SongOut(BaseModel):
     source_url: str
     verified: bool
     listen_url: str
+    artwork_url: str | None
+    apple_url: str | None
 
 
 class MoodTagOut(BaseModel):
@@ -100,11 +103,15 @@ def _song_out(rec: Recommendation) -> SongOut:
         title_original=s.title_original,
         artist=s.artist,
         genre=s.genre,
-        work=WorkOut(key=s.work.key, title=s.work.title, year=s.work.year, kind=s.work.kind),
+        work=WorkOut(
+            key=s.work.key, title=s.work.title, year=s.work.year, kind=s.work.kind, cover_url=s.work.cover_url
+        ),
         story=s.story,
         scene=s.scene,
         reason=rec.reason,
         source_url=s.source_url,
         verified=s.verification == "sourced",
         listen_url=f"https://www.youtube.com/results?search_query={query}",
+        artwork_url=s.artwork_url,
+        apple_url=s.apple_url,
     )

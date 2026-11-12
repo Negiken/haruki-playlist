@@ -1,0 +1,556 @@
+{
+  "works": {
+    "hitsuji": {
+      "cover_url": "https://covers.openlibrary.org/b/id/11525289-L.jpg",
+      "edition": "講談社文庫（下）"
+    },
+    "sekai_no_owari": {
+      "cover_url": "https://covers.openlibrary.org/b/isbn/9784101001340-L.jpg",
+      "edition": "新潮文庫（上）"
+    },
+    "norwegian_wood": {
+      "cover_url": "https://covers.openlibrary.org/b/id/11525458-L.jpg",
+      "edition": "講談社文庫（下）"
+    },
+    "dance": {
+      "cover_url": "https://covers.openlibrary.org/b/id/11522029-L.jpg",
+      "edition": "講談社文庫（上）"
+    },
+    "nejimaki": {
+      "cover_url": "https://covers.openlibrary.org/b/id/8276770-L.jpg",
+      "edition": "新潮文庫（第3部）"
+    },
+    "sputnik": {
+      "cover_url": "https://covers.openlibrary.org/b/id/13878810-L.jpg",
+      "edition": "講談社 単行本"
+    },
+    "kafka": {
+      "cover_url": "https://covers.openlibrary.org/b/id/13485790-L.jpg",
+      "edition": "新潮社 単行本（上）"
+    },
+    "after_dark": {
+      "cover_url": "https://covers.openlibrary.org/b/id/12669588-L.jpg",
+      "edition": "講談社 単行本"
+    },
+    "1q84": {
+      "cover_url": "https://covers.openlibrary.org/b/id/10464876-L.jpg",
+      "edition": "新潮文庫（BOOK1 前編）"
+    },
+    "tsukuru": {
+      "cover_url": "https://covers.openlibrary.org/b/id/7852099-L.jpg",
+      "edition": "英語版（日本語版の書影が Open Library に無いため）"
+    },
+    "onna_no_inai": {
+      "cover_url": "https://covers.openlibrary.org/b/id/8818031-L.jpg",
+      "edition": "英語版（日本語版の書影が Open Library に無いため）"
+    }
+  },
+  "songs": {
+    "hitsuji-midnight-special": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/83/74/72/837472ce-e677-7c6c-4ff1-025f0e428228/00602567643968.rgb.jpg/600x600bb.jpg",
+      "apple_url": "https://music.apple.com/jp/album/midnight-special-live-at-whiskey-a-go-go-1966/1386359060?i=1386360543",
+      "matched": "Midnight Special (Live At Whiskey A Go Go / 1966) — ジョニー・リヴァース（The Best of Johnny Rivers）"
+    },
+    "hitsuji-roll-over-beethoven": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music6/v4/98/b7/2e/98b72e2d-133d-9869-96e4-800485f879d9/00724383281954.jpg/600x600bb.jpg",
+      "apple_url": "https://music.apple.com/jp/album/roll-over-beethoven-live/724380172?i=724382044",
+      "matched": "Roll Over Beethoven (Live) — ジョニー・リヴァース（Totally Live at the Whiskey à Go Go）"
+    },
+    "hitsuji-secret-agent-man": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/0a/c5/e9/0ac5e926-698f-a6e0-333f-8e8c4a684731/00724383597659.rgb.jpg/600x600bb.jpg",
+      "apple_url": "https://music.apple.com/jp/album/secret-agent-man/724561844?i=724562145",
+      "matched": "Secret Agent Man — ジョニー・リヴァース（Greatest Hits）"
+    },
+    "hitsuji-johnny-b-goode": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music6/v4/98/b7/2e/98b72e2d-133d-9869-96e4-800485f879d9/00724383281954.jpg/600x600bb.jpg",
+      "apple_url": "https://music.apple.com/jp/album/johnny-b-goode-live/724380172?i=724382205",
+      "matched": "Johnny B. Goode (Live) — ジョニー・リヴァース（Totally Live at the Whiskey à Go Go）"
+    },
+    "hitsuji-the-song-is-ended": null,
+    "hitsuji-home-on-the-range": null,
+    "hitsuji-serenade-for-strings": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music/y2004/m08/d02/h14/s05.qjqathmp.jpg/600x600bb.jpg",
+      "apple_url": "https://music.apple.com/jp/album/serenade-for-strings-in-c-major-op-48-i-pezzo-in-forma/19929745?i=19929705",
+      "matched": "Serenade for Strings in C Major, Op. 48: I. Pezzo in forma di Sonatina — フィリップ・アントルモン & ウィーン室内管弦楽団（チャイコフスキー:弦楽セレナード/フィレンツェの思い出(弦楽合奏版)）"
+    },
+    "hitsuji-perfidia": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music60/v4/47/6b/aa/476baada-6bcc-bc3d-dfd1-3e483b2b5710/886445776133.jpg/600x600bb.jpg",
+      "apple_url": "https://music.apple.com/jp/album/perfidia/1120198057?i=1120199154",
+      "matched": "Perfidia — パーシー・フェイス（Mucho Gusto! More Music of México）"
+    },
+    "hitsuji-magnificent-seven": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/89/cb/70/89cb70d9-938e-d16b-4ebc-7da402d0fb17/886445930634.jpg/600x600bb.jpg",
+      "apple_url": "https://music.apple.com/jp/album/the-magnificent-seven/1146428051?i=1146428475",
+      "matched": "The Magnificent Seven — エルマー・バーンスタイン（The Magnificent Seven (Original Motion Picture Soundtrack)）"
+    },
+    "slow-boat-on-a-slow-boat-to-china": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/a1/6d/f4/a16df46a-4e73-79c1-bcfd-87a0660d7e37/00025218111126.rgb.jpg/600x600bb.jpg",
+      "apple_url": "https://music.apple.com/jp/album/on-a-slow-boat-to-china/1443168401?i=1443168419",
+      "matched": "On a Slow Boat to China — ソニー・ロリンズ（Sonny Rollins with the Modern Jazz Quartet）"
+    },
+    "slow-boat-new-york-mining-disaster": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/94/a7/5f/94a75fd1-17da-3a38-42dc-c5e35bf56046/16UMGIM86639.rgb.jpg/600x600bb.jpg",
+      "apple_url": "https://music.apple.com/jp/album/new-york-mining-disaster-1941/1445668810?i=1445670493",
+      "matched": "New York Mining Disaster 1941 — ビー・ジーズ（The Ultimate Bee Gees）"
+    },
+    "slow-boat-auld-lang-syne": null,
+    "sekai-end-of-the-world": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Features/19/fa/5d/dj.ashmqwlx.jpg/600x600bb.jpg",
+      "apple_url": "https://music.apple.com/jp/album/the-end-of-the-world/258618389?i=258619200",
+      "matched": "The End of the World — スキーター・デイヴィス（The Essential Skeeter Davis）"
+    },
+    "sekai-danny-boy": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Features/15/62/ff/dj.wdquzfrf.jpg/600x600bb.jpg",
+      "apple_url": "https://music.apple.com/jp/album/danny-boy/349146298?i=349146518",
+      "matched": "Danny Boy — ビング・クロスビー（Songs You Know and Love）"
+    },
+    "sekai-i-go-to-pieces": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music/v4/10/97/aa/1097aa4a-d96a-d6db-b72a-8f968ed6554c/0724353593155_1500x1500_300dpi.jpg/600x600bb.jpg",
+      "apple_url": "https://music.apple.com/jp/album/i-go-to-pieces/695909511?i=695910607",
+      "matched": "I Go To Pieces — ピーター・アンド・ゴードン（The Ultimate Peter and Gordon）"
+    },
+    "sekai-watching-the-river-flow": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/23/51/b3/2351b36a-cb50-0c80-40ad-8a91f0baf443/074646597620.jpg/600x600bb.jpg",
+      "apple_url": "https://music.apple.com/jp/album/watching-the-river-flow/190239480?i=190239521",
+      "matched": "Watching the River Flow — ボブ・ディラン（Bob Dylan's Greatest Hits, Vol. 2）"
+    },
+    "sekai-positively-4th-street": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/fe/94/1c/fe941cba-b959-c8e7-9dd6-ffe273807638/886449190485.jpg/600x600bb.jpg",
+      "apple_url": "https://music.apple.com/jp/album/positively-4th-street-single-version/1560214193?i=1560214204",
+      "matched": "Positively 4th Street (Single Version) — ボブ・ディラン（Side Tracks）"
+    },
+    "sekai-autumn-in-new-york": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/78/76/85/7876858e-fdf5-96d8-7229-bfad45622164/24UMGIM04545.rgb.jpg/600x600bb.jpg",
+      "apple_url": "https://music.apple.com/jp/album/autumn-in-new-york-arr-eric-rogers/1727344471?i=1727345094",
+      "matched": "Autumn In New York (Arr. Eric Rogers) — フランク・チャックスフィールド・オーケストラ（Weekend in New York）"
+    },
+    "nw-norwegian-wood": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/f4/d7/89/f4d78985-3e01-130c-feea-a7713987eb8d/13UMGIM63866.rgb.jpg/600x600bb.jpg",
+      "apple_url": "https://music.apple.com/jp/album/norwegian-wood-this-bird-has-flown-remastered-2009/6818181444?i=6818181451",
+      "matched": "Norwegian Wood (This Bird Has Flown) [Remastered 2009] — ビートルズ（Rubber Soul (Remastered 2009)）"
+    },
+    "nw-michelle": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/7d/1d/99/7d1d9988-88df-70cb-3433-896eda047002/23UM1IM18073.rgb.jpg/600x600bb.jpg",
+      "apple_url": "https://music.apple.com/jp/album/michelle-2023-mix/1713066744?i=1713066910",
+      "matched": "Michelle (2023 Mix) — ビートルズ（The Beatles 1962–1966 (2023 Edition) [The Red Album]）"
+    },
+    "nw-nowhere-man": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/7d/1d/99/7d1d9988-88df-70cb-3433-896eda047002/23UM1IM18073.rgb.jpg/600x600bb.jpg",
+      "apple_url": "https://music.apple.com/jp/album/nowhere-man-2023-mix/1713066744?i=1713066909",
+      "matched": "Nowhere Man (2023 Mix) — ビートルズ（The Beatles 1962–1966 (2023 Edition) [The Red Album]）"
+    },
+    "nw-julia": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/14/d1/3d/14d13df6-b66a-cdd8-b71c-7f678f7c7fbd/18UMGIM58178.rgb.jpg/600x600bb.jpg",
+      "apple_url": "https://music.apple.com/jp/album/julia-2018-mix/1436905161?i=1436905382",
+      "matched": "Julia (2018 Mix) — ビートルズ（The Beatles (White Album) (Super Deluxe Edition) [2018 Remix & Remaster]）"
+    },
+    "nw-dear-heart": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Features114/v4/55/b9/c1/55b9c183-36d9-ec04-6542-d92b4af5b3c0/dj.frlpydie.jpg/600x600bb.jpg",
+      "apple_url": "https://music.apple.com/jp/album/dear-heart/298421377?i=298421551",
+      "matched": "Dear Heart — ヘンリー・マンシーニ（Greatest Hits: The Best of Henry Mancini (Remastered)）"
+    },
+    "nw-people-are-strange": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Features115/v4/03/c6/2d/03c62d8a-487f-78c3-8416-488cfac664eb/dj.sboowgda.jpg/600x600bb.jpg",
+      "apple_url": "https://music.apple.com/jp/album/people-are-strange/640047463?i=640047588",
+      "matched": "People Are Strange — ドアーズ（The Very Best of the Doors）"
+    },
+    "nw-honeysuckle-rose": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/62/c3/49/62c349ac-fc2b-5ae8-63d8-3e4db4789d71/00025218606424.rgb.jpg/600x600bb.jpg",
+      "apple_url": "https://music.apple.com/jp/album/honeysuckle-rose/1445735561?i=1445735892",
+      "matched": "Honeysuckle Rose — セロニアス・モンク（The Unique Thelonious Monk）"
+    },
+    "nw-wedding-bell-blues": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music/10/e4/d4/mzi.xkyafjjy.jpg/600x600bb.jpg",
+      "apple_url": "https://music.apple.com/jp/album/wedding-bell-blues/463898594?i=463898621",
+      "matched": "Wedding Bell Blues — ローラ・ニーロ（The Essential Laura Nyro）"
+    },
+    "nw-desafinado": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/14/c5/97/14c597a3-22c8-d2a9-dc49-0f8b1496f776/14UMGIM16822.rgb.jpg/600x600bb.jpg",
+      "apple_url": "https://music.apple.com/jp/album/desafinado-feat-ant%C3%B4nio-carlos-jobim-mono/1469580970?i=1469581300",
+      "matched": "Desafinado (feat. Antônio Carlos Jobim) [Mono] — スタン・ゲッツ & ジョアン・ジルベルト（Getz/Gilberto (Expanded Edition)）"
+    },
+    "nw-scarborough-fair": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music113/v4/06/f4/d2/06f4d208-642e-75c0-d905-1ac98e7d441c/886447797075.jpg/600x600bb.jpg",
+      "apple_url": "https://music.apple.com/jp/album/scarborough-fair-canticle/1467438660?i=1467438670",
+      "matched": "Scarborough Fair / Canticle — サイモン&ガーファンクル（Parsley, Sage, Rosemary and Thyme）"
+    },
+    "nw-brahms-pc2": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music/bd/43/13/mzi.nlbfkopd.jpg/600x600bb.jpg",
+      "apple_url": "https://music.apple.com/jp/album/piano-concerto-no-2-in-b-flat-major-op-83-i-allegro-non-troppo/192440000?i=192440002",
+      "matched": "Piano Concerto No. 2 in B Flat Major, Op. 83: I. Allegro Non Troppo — カール・ベーム, Saxon State Orchestra & ヴィルヘルム・バックハウス（ブラームス: ピアノ協奏曲第2番/ワルツ[バックハウス/ベーム/ナクソス・ヒストリカルシリーズ]）"
+    },
+    "dance-dance-dance-dance": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/57/6f/c7/576fc76a-2eb4-11b1-a5dd-ad2aee4cdf0f/13UABIM04230.rgb.jpg/600x600bb.jpg",
+      "apple_url": "https://music.apple.com/jp/album/dance-dance-dance/728254629?i=728254992",
+      "matched": "Dance, Dance, Dance — ザ・ビーチ・ボーイズ（Greatest Hits）"
+    },
+    "dance-born-to-lose": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/a7/08/85/a70885c2-f09b-e998-e6dd-84bb6a8d3701/112713.jpg/600x600bb.jpg",
+      "apple_url": "https://music.apple.com/jp/album/born-to-lose-2024-remaster/1881491364?i=1881491532",
+      "matched": "Born to Lose (2024 Remaster) — レイ・チャールズ（Modern Sounds In Country And Western Music, Vols 1 & 2 (2024 Remaster)）"
+    },
+    "dance-rock-a-hula-baby": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music1/v4/01/5c/12/015c128a-db18-7439-f32c-b758c1f76d31/dj.mhovbyxa.jpg/600x600bb.jpg",
+      "apple_url": "https://music.apple.com/jp/album/rock-a-hula-baby/255216924?i=255217823",
+      "matched": "Rock-A-Hula Baby — エルヴィス・プレスリー（Elvis At the Movies (Remastered)）"
+    },
+    "dance-all-alone-am-i": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music/y2005/m06/d30/h20/s06.kwjrgziw.jpg/600x600bb.jpg",
+      "apple_url": "https://music.apple.com/jp/album/all-alone-am-i-re-recorded-in-stereo/74009754?i=74009716",
+      "matched": "All Alone Am I (Re-Recorded In Stereo) — Brenda Lee（Greatest Rock and Roll Songs (Re-Recorded in Stereo)）"
+    },
+    "dance-travelin-man": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/32/dc/f7/32dcf71c-ab5e-78a4-ae9a-1eb7dd028d64/00602547481832.rgb.jpg/600x600bb.jpg",
+      "apple_url": "https://music.apple.com/jp/album/travelin-man-remastered/1443137703?i=1443138544",
+      "matched": "Travelin' Man (Remastered) — リッキー・ネルソン（Rick Is 21 (Remastered)）"
+    },
+    "dance-summertime-blues": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/98/21/c7/9821c703-81e5-c0d4-0031-1c69d31c4adb/00602557244359.rgb.jpg/600x600bb.jpg",
+      "apple_url": "https://music.apple.com/jp/album/summertime-blues/1444122515?i=1444123142",
+      "matched": "Summertime Blues — エディ・コクラン（12 of His Biggest Hits）"
+    },
+    "dance-come-go-with-me": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/78/f7/b4/78f7b40c-36b8-325d-1401-97466ecac2a9/00602547917010.rgb.jpg/600x600bb.jpg",
+      "apple_url": "https://music.apple.com/jp/album/come-go-with-me/1443885762?i=1443885767",
+      "matched": "Come Go With Me — デル・バイキングス（Come Go With Me: The Best of the Del-Vikings）"
+    },
+    "dance-sugar-shack": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/f5/86/9a/f5869ab6-51d1-b775-01d7-5858287c2951/196626755094.jpg/600x600bb.jpg",
+      "apple_url": "https://music.apple.com/jp/album/sugar-shack/1621397882?i=1621398097",
+      "matched": "Sugar Shack — Jimmy Gilmer & The Fireballs（Sugar Shack / Buddy's Buddy）"
+    },
+    "dance-theme-from-shaft": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/0b/7e/c4/0b7ec4dd-1152-5b32-6d8d-16fe114b8268/00888072013445.rgb.jpg/600x600bb.jpg",
+      "apple_url": "https://music.apple.com/jp/album/theme-from-shaft/1440937741?i=1440937747",
+      "matched": "Theme from Shaft — アイザック・ヘイズ（Shaft (Music From the Soundtrack)）"
+    },
+    "dance-its-all-over-now-baby-blue": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/ed/66/07/ed6607f0-87c7-149e-be4f-8c8da987107e/074646575925.jpg/600x600bb.jpg",
+      "apple_url": "https://music.apple.com/jp/album/its-all-over-now-baby-blue-live/157433155?i=157433179",
+      "matched": "It's All Over Now, Baby Blue (Live) — ボブ・ディラン（The Bootleg Series, Vol. 4: Live 1966 - The \"Royal Albert Hall\" Concert）"
+    },
+    "dance-april-in-paris": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/45/c2/fd/45c2fd50-ea08-4a77-5fcc-4cebbd7fbd9b/06UMGIM09996.rgb.jpg/600x600bb.jpg",
+      "apple_url": "https://music.apple.com/jp/album/april-in-paris-alternate-take/1440920890?i=1440921650",
+      "matched": "April In Paris (Alternate Take) — カウント・ベイシー（April In Paris (Expanded Edition)）"
+    },
+    "dance-everyday-people": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/ba/2e/c3/ba2ec374-39ac-1bf7-f64e-63c8b215484b/828767591223.jpg/600x600bb.jpg",
+      "apple_url": "https://music.apple.com/jp/album/everyday-people/216551517?i=216553760",
+      "matched": "Everyday People — スライ&ザ・ファミリー・ストーン（Stand! (Deluxe Edition)）"
+    },
+    "dance-hungry-heart": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/ac/29/8f/ac298fbd-fa23-e8de-09d7-dec9c977f912/074643685429.jpg/600x600bb.jpg",
+      "apple_url": "https://music.apple.com/jp/album/hungry-heart/186064796?i=186065295",
+      "matched": "Hungry Heart — ブルース・スプリングスティーン（The River）"
+    },
+    "dance-schubert-trio-2": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/6c/8e/88/6c8e8845-34fb-a319-3680-49142e457d20/886448340959.jpg/600x600bb.jpg",
+      "apple_url": "https://music.apple.com/jp/album/schubert-piano-trio-no-2-haydn-piano-trio-no-10/1523254721",
+      "matched": "アイザック・スターン, レナード・ローズ & ユージン・イストミン（Schubert: Piano Trio No. 2 - Haydn: Piano Trio No. 10）"
+    },
+    "dance-summer-in-the-city": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music/v4/96/00/15/96001516-1d43-c60f-8f78-9a68e5207824/886444042253.jpg/600x600bb.jpg",
+      "apple_url": "https://music.apple.com/jp/album/summer-in-the-city-remastered/673007762?i=673008203",
+      "matched": "Summer in the City (Remastered) — ラヴィン・スプーンフル（Summer In the City - The Collection）"
+    },
+    "nejimaki-thieving-magpie": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/d2/12/7f/d2127f99-cd51-198e-48b6-3ffd6bc73f8d/12UMGIM00650.rgb.jpg/600x600bb.jpg",
+      "apple_url": "https://music.apple.com/jp/album/la-gazza-ladra-overture/1452254650?i=1452254760",
+      "matched": "La gazza ladra: Overture — ロンドン交響楽団 & クラウディオ・アバド（Rossini: Overtures）"
+    },
+    "nejimaki-vogel-als-prophet": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/3c/23/64/3c2364bc-ac6e-b22d-7c7a-7084f7f05bc5/21UMGIM59080.rgb.jpg/600x600bb.jpg",
+      "apple_url": "https://music.apple.com/jp/album/waldszenen-op-82-no-7-vogel-als-prophet-grand-piano/1633075835?i=1633077080",
+      "matched": "Waldszenen, Op. 82: No. 7, Vogel als Prophet (Grand Piano) — ヴィキングル・オラフソン（From Afar）"
+    },
+    "nejimaki-maltese-melody": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/bd/4f/f4/bd4ff481-769c-2543-7a3c-2e86619a2893/00814647020587_Cover.jpg/600x600bb.jpg",
+      "apple_url": "https://music.apple.com/jp/album/the-maltese-melody/1530058925?i=1530059013",
+      "matched": "The Maltese Melody — Herb Alpert & The Tijuana Brass（The Brass Are Comin'）"
+    },
+    "nejimaki-a-summer-place": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/3b/5c/30/3b5c3089-4c4d-fcf6-cdad-1e9f7858190a/mzi.wryxcbuo.jpg/600x600bb.jpg",
+      "apple_url": "https://music.apple.com/jp/album/theme-from-a-summer-place-single-version/191435770?i=191435788",
+      "matched": "Theme from \"A Summer Place\" (Single Version) — パーシー・フェイス（Percy Faith's Greatest Hits）"
+    },
+    "nejimaki-taras-theme": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/00/17/4d/00174d56-ad5c-852b-8b02-ef816da609c7/886445798814.jpg/600x600bb.jpg",
+      "apple_url": "https://music.apple.com/jp/album/taras-theme-from-gone-with-the-wind/1198836241?i=1198836323",
+      "matched": "Tara's Theme from \"Gone With The Wind\" — パーシー・フェイス（Tara's Theme from \"Gone With the Wind\" (And Other Movie Themes)）"
+    },
+    "nejimaki-hawaiian-wedding-song": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music113/v4/4a/13/9e/4a139e61-1be9-5444-9c67-d6a10f0ff304/cover.jpg/600x600bb.jpg",
+      "apple_url": "https://music.apple.com/jp/album/hawaiian-wedding-song/1519094098?i=1519094464",
+      "matched": "Hawaiian Wedding Song — アンディ・ウィリアムス（Two Time Winners (Bonus Track Version)）"
+    },
+    "nejimaki-canadian-sunset": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/97/f6/3e/97f63e96-52df-cb48-8866-bbef9e5ca3f8/843041047579_.jpg/600x600bb.jpg",
+      "apple_url": "https://music.apple.com/jp/album/canadian-sunset/1714270455?i=1714270575",
+      "matched": "Canadian Sunset — アンディ・ウィリアムス（Andy Williams' Best）"
+    },
+    "nejimaki-ebb-tide": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music5/v4/47/e4/66/47e46640-c1c0-24c1-aeaa-3e9583910828/8718858859689.jpg/600x600bb.jpg",
+      "apple_url": "https://music.apple.com/jp/album/ebb-tide/916287377?i=916287440",
+      "matched": "Ebb Tide — ロバート・マックスウェル（Shangri-La）"
+    },
+    "nejimaki-san-jose": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/18/58/62/18586281-f0c3-e014-3c63-79511688a29e/s06.nvhnbmda.jpg/600x600bb.jpg",
+      "apple_url": "https://music.apple.com/jp/album/do-you-know-the-way-to-san-jose/50232525?i=50232585",
+      "matched": "Do You Know the Way to San Jose — ディオンヌ・ワーウィック（The Dionne Warwick Collection: Her All-Time Greatest Hits）"
+    },
+    "nejimaki-johnny-angel": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music/v4/7d/cb/c4/7dcbc4c3-ce96-6efa-5c40-30a6bd08cdc9/886788748200.tif/600x600bb.jpg",
+      "apple_url": "https://music.apple.com/jp/album/johnny-angel/543234247?i=543234298",
+      "matched": "Johnny Angel — Shelley Fabares（Shelley Fabares）"
+    },
+    "sputnik-das-veilchen": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music/v4/5c/71/d6/5c71d605-c768-1124-cd74-08f1219057de/724357480352.jpg/600x600bb.jpg",
+      "apple_url": "https://music.apple.com/jp/album/das-veilchen-k-476-2001-remastered-version/695538041?i=695541378",
+      "matched": "Das Veilchen, K.476 (2001 Remastered Version) — エリザベート・シュワルツコップ & ヴァルター・ギーゼキング（Mozart : Lieder and Concert Arias）"
+    },
+    "sputnik-aruanda": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/b8/d7/82/b8d782f0-ab50-728e-403e-7d40ebf7825d/06UMGIM66972.rgb.jpg/600x600bb.jpg",
+      "apple_url": "https://music.apple.com/jp/album/take-me-to-aruanda/1442669041?i=1442669290",
+      "matched": "(Take Me To) Aruanda — アストラッド・ジルベルト（Bossa Nova）"
+    },
+    "sputnik-mack-the-knife": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music/y2004/m11/d17/h18/s06.tysgshrt.jpg/600x600bb.jpg",
+      "apple_url": "https://music.apple.com/jp/album/mack-the-knife/30393091?i=30393093",
+      "matched": "Mack the Knife — ボビー・ダーリン（That's All）"
+    },
+    "sputnik-liszt-pc1": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/14/46/fe/1446fe00-6698-16b8-8639-b60dacae638a/5059449115382.png/600x600bb.jpg",
+      "apple_url": "https://music.apple.com/jp/album/piano-concerto-no-1-in-e-flat-major-s-124-ii-quasi-adagio-live/1675336673?i=1675336675",
+      "matched": "Piano Concerto No. 1 in E-Flat Major, S. 124: II. Quasi adagio (Live) — ウィーン・フィルハーモニー管弦楽団, マルタ・アルゲリッチ & ダニエル・バレンボイム（Liszt: Klavierkonzert No. 1 - Mahler: Symphony No. 7 (Live)）"
+    },
+    "sputnik-brahms-ballades": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/88/55/25/88552528-06a6-ddde-621c-149f19b43666/00028945524726.rgb.jpg/600x600bb.jpg",
+      "apple_url": "https://music.apple.com/jp/album/4-ballades-op-10-no-1-in-d-minor/1452581320?i=1452584088",
+      "matched": "4 Ballades, Op. 10: No. 1 in D Minor — ジュリアス・カッチェン（Brahms: Works for Solo Piano）"
+    },
+    "kafka-crossroads": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/c3/3d/f7/c33df7d6-72be-fefe-d517-907633e2aa59/00602537803163.rgb.jpg/600x600bb.jpg",
+      "apple_url": "https://music.apple.com/jp/album/crossroads-live/1440830708?i=1440831035",
+      "matched": "Crossroads (Live) — クリーム（Wheels of Fire）"
+    },
+    "kafka-little-red-corvette": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/aa/09/cc/aa09ccec-3bd0-a38c-b515-9d9bfd889b62/093624914594.jpg/600x600bb.jpg",
+      "apple_url": "https://music.apple.com/jp/album/little-red-corvette/1170674642?i=1170674885",
+      "matched": "Little Red Corvette — プリンス（4Ever）"
+    },
+    "kafka-my-favorite-things": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/38/49/44/384944a8-297f-0844-77da-1ae3b976c457/603497893119.jpg/600x600bb.jpg",
+      "apple_url": "https://music.apple.com/jp/album/my-favorite-things/962193155?i=962193194",
+      "matched": "My Favorite Things — ジョン・コルトレーン（My Favorite Things）"
+    },
+    "kafka-archduke-trio": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/c6/df/b6/c6dfb6af-5886-1b51-516b-b1c7424d0cda/196871660464.jpg/600x600bb.jpg",
+      "apple_url": "https://music.apple.com/jp/album/piano-trio-no-7-in-b-flat-major-op-97-archduke-iii/1725363052?i=1725363449",
+      "matched": "Piano Trio No. 7 in B-Flat Major, Op. 97 \"Archduke\": III. Andante cantabile, ma però con moto — ヨーヨー・マ, レオニダス・カヴァコス & エマニュエル・アックス（Beethoven for Three: Symphony No. 4 and Op. 97 \"Archduke\"）"
+    },
+    "kafka-schubert-d850": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/c8/23/51/c8235117-d8de-e9cd-2878-29f5d819250d/11UMGIM36516.rgb.jpg/600x600bb.jpg",
+      "apple_url": "https://music.apple.com/jp/album/piano-sonata-no-17-in-d-major-d-850-i-allegro-vivace-live/1452364128?i=1452366150",
+      "matched": "Piano Sonata No. 17 in D Major, D. 850: I. Allegro vivace (Live) — アリス=紗良・オット（Pictures (Live At Mariinsky Theatre, St. Petersburg, 2012)）"
+    },
+    "kafka-kid-a": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/bd/8e/13/bd8e1358-b367-a689-cb84-cebd0b067dc4/634904078263.png/600x600bb.jpg",
+      "apple_url": "https://music.apple.com/jp/album/kid-a/1097862870?i=1097863120",
+      "matched": "Kid A — レディオヘッド（Kid A）"
+    },
+    "after-dark-five-spot": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music/v4/1a/03/4f/1a034f49-2e13-788c-e48e-c88385448e41/cover.jpg/600x600bb.jpg",
+      "apple_url": "https://music.apple.com/jp/album/five-spot-after-dark/579475204?i=579475207",
+      "matched": "Five Spot After Dark — カーティス・フラー（Blues-Ette）"
+    },
+    "after-dark-go-away-little-girl": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/2d/40/13/2d401318-8e89-3d1c-6562-b3a96e33f99b/dj.dpokeolj.jpg/600x600bb.jpg",
+      "apple_url": "https://music.apple.com/jp/album/go-away-little-girl/187483259?i=187483324",
+      "matched": "Go Away Little Girl — パーシー・フェイス（Themes for Young Lovers）"
+    },
+    "after-dark-more": null,
+    "after-dark-ben-webster": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music/v4/f1/ee/88/f1ee880e-e7d8-7ace-127b-d1da304ec0d7/cover.jpg/600x600bb.jpg",
+      "apple_url": "https://music.apple.com/jp/album/go-home-feat-ben-webster/571333837?i=571333895",
+      "matched": "Go Home (feat. Ben Webster) — ジェリー・マリガン（Gerry Mulligan Meets Ben Webster (feat. Ben Webster)）"
+    },
+    "after-dark-jealousy": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/34/80/c9/3480c954-8813-8e24-9164-61ab26b1a1dd/190295810191.jpg/600x600bb.jpg",
+      "apple_url": "https://music.apple.com/jp/album/jealousy/1393146587?i=1393147005",
+      "matched": "Jealousy — ペット・ショップ・ボーイズ（Behaviour: Further Listening 1990-1991 (Deluxe Edition) [2018 Remaster]）"
+    },
+    "after-dark-i-cant-go-for-that": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/d5/dd/77/d5dd7770-354e-2552-10e8-f5115cd8bdce/mzi.xkxehngk.jpg/600x600bb.jpg",
+      "apple_url": "https://music.apple.com/jp/album/%E3%82%A2%E3%82%A4-%E3%82%AD%E3%83%A3%E3%83%B3%E3%83%88-%E3%82%B4%E3%83%BC-%E3%83%95%E3%82%A9%E3%83%BC-%E3%82%B6%E3%83%83%E3%83%88/217749693?i=217749916",
+      "matched": "アイ・キャント・ゴー・フォー・ザット — ダリル・ホール&ジョン・オーツ（Private Eyes (Expanded Edition)）"
+    },
+    "after-dark-tombe-la-neige": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/f7/1c/8e/f71c8e60-a9a5-7e4b-4307-bff0b11e1a1f/dj.nwtokakx.tif/600x600bb.jpg",
+      "apple_url": "https://music.apple.com/jp/album/tombe-la-neige/1287943783?i=1287943787",
+      "matched": "Tombe La Neige — サルヴァトール・アダモ（Triple Best Of）"
+    },
+    "after-dark-sonnymoon-for-two": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/70/88/f6/7088f66b-afc6-b320-6678-164798d9c819/00602577697159.rgb.jpg/600x600bb.jpg",
+      "apple_url": "https://music.apple.com/jp/album/sonnymoon-for-two-live-at-the-village-vanguard-1957/1459940991?i=1459941333",
+      "matched": "Sonnymoon For Two (Live At The Village Vanguard, 1957 / Evening Take) — ソニー・ロリンズ（The Complete Night At The Village Vanguard）"
+    },
+    "after-dark-bakudan-juice": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/24/72/84/24728466-8fd3-2f58-12e9-dad0307c874c/00044002054326.rgb.jpg/600x600bb.jpg",
+      "apple_url": "https://music.apple.com/jp/album/%E3%83%90%E3%82%AF%E3%83%80%E3%83%B3-%E3%82%B8%E3%83%A5%E3%83%BC%E3%82%B9-%E7%94%9F%E3%82%BF%E3%82%A4%E3%83%97/1443189742?i=1443190048",
+      "matched": "バクダン・ジュース(生タイプ) — スガ シカオ（FAMILY）"
+    },
+    "1q84-sinfonietta": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/03/fd/1e/03fd1e90-f3e8-572c-0b67-e368c6048e2c/886446939117.jpg/600x600bb.jpg",
+      "apple_url": "https://music.apple.com/jp/album/sinfonietta-for-orchestra-op-60-remastered-i-allegretto/1392039469?i=1392039555",
+      "matched": "Sinfonietta for Orchestra, Op. 60 (Remastered): I. Allegretto — ジョージ・セル & クリーヴランド管弦楽団（Bartók: Concerto for Orchestra, Sz. 116 - Janácek: Sinfonietta for Orchestra, Op. 60）"
+    },
+    "1q84-paper-moon": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/bc/d3/5c/bcd35c2c-6d3c-e4a8-f311-742c1ba7058e/00724352472154.jpg/600x600bb.jpg",
+      "apple_url": "https://music.apple.com/jp/album/its-only-a-paper-moon/724835747?i=724836427",
+      "matched": "It's Only a Paper Moon — ナット・キング・コール（Unforgettable）"
+    },
+    "1q84-well-tempered-clavier": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/ab/39/35/ab3935c4-0312-eac0-25d1-d23a8fbd2c2a/3149020958605_cover.jpg/600x600bb.jpg",
+      "apple_url": "https://music.apple.com/jp/album/the-well-tempered-clavier-book-ii-bwv-870-893-prelude/6797681194?i=6797681452",
+      "matched": "The Well-Tempered Clavier, Book II, BWV 870-893: Prelude and Fugue No. 8 in D-Sharp Minor, BWV 877: II. Fugue — バンジャマン・アラール（J.S. Bach: The Complete Works for Keyboard, Vol. 12: The Well-Tempered Clavier, Book II）"
+    },
+    "1q84-matthew-passion": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/18/23/e8/1823e8ae-9ebb-ebdc-14d4-e2062b7a0795/3149020943885_cover.jpg/600x600bb.jpg",
+      "apple_url": "https://music.apple.com/jp/album/matth%C3%A4us-passion-bwv-244-prima-parte-nr-6-aria-bu%C3%9F-und-reu/1608591674?i=1608592291",
+      "matched": "Matthäus-Passion, BWV 244, Prima parte: Nr.6. Aria \"Buß und Reu\" — ラファエル・ピション, ルシール・リシャルド & ピグマリオン（J.S. Bach: Matthäus-Passion, BWV 244）"
+    },
+    "1q84-lachrimae": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/47/b4/61/47b46191-d1f9-f350-c52f-43c882d89063/198588425220.jpg/600x600bb.jpg",
+      "apple_url": "https://music.apple.com/jp/album/lachrimae/1752762073?i=1752762839",
+      "matched": "Lachrimae — ミグナルダ（The Delight of Solitariness: The Lute Songs of John Dowland）"
+    },
+    "1q84-sibelius-vc": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Features4/v4/96/3e/2e/963e2e58-6a82-2d5e-7968-009c02e70cfa/dj.ammgdtql.jpg/600x600bb.jpg",
+      "apple_url": "https://music.apple.com/jp/album/violin-concerto-in-d-minor-op-47-i-allegro-moderato/693257924?i=693259359",
+      "matched": "Violin Concerto in D Minor, Op. 47: I. Allegro moderato — ダヴィッド・オイストラフ & ストックホルム・フェスティヴァル・オーケストラ（Sibelius: Violin Concerto）"
+    },
+    "1q84-my-favorite-things": null,
+    "1q84-beat-goes-on": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music/y2005/m05/d18/h11/s06.uenluyxq.jpg/600x600bb.jpg",
+      "apple_url": "https://music.apple.com/jp/album/the-beat-goes-on/64740440?i=64739876",
+      "matched": "The Beat Goes On — ソニー&シェール（The Two of Us）"
+    },
+    "1q84-mothers-little-helper": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/29/b7/81/29b781e5-3773-c87e-c6a8-82581e53d270/13ABKIM00053.rgb.jpg/600x600bb.jpg",
+      "apple_url": "https://music.apple.com/jp/album/mothers-little-helper/1440764786?i=1440765355",
+      "matched": "Mother's Little Helper — ザ・ローリング・ストーンズ（Hot Rocks 1964-1971）"
+    },
+    "1q84-lady-jane": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/c0/50/5c/c0505c5d-c19c-c2df-3c00-1f1f597498dd/16ABKIM00061.rgb.jpg/600x600bb.jpg",
+      "apple_url": "https://music.apple.com/jp/album/lady-jane-mono/1440774096?i=1440783866",
+      "matched": "Lady Jane (Mono) — ザ・ローリング・ストーンズ（Aftermath）"
+    },
+    "1q84-little-red-rooster": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/6c/26/11/6c261171-dc5a-a390-7ddf-4cd9a1336006/13ABKIM00017.rgb.jpg/600x600bb.jpg",
+      "apple_url": "https://music.apple.com/jp/album/little-red-rooster/1440757892?i=1440758714",
+      "matched": "Little Red Rooster — ザ・ローリング・ストーンズ（The Rolling Stones, Now!）"
+    },
+    "1q84-miagete-goran": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/bb/db/74/bbdb74c6-cf97-8646-f65a-f0644c9aaaa4/16UMGIM58389.rgb.jpg/600x600bb.jpg",
+      "apple_url": "https://music.apple.com/jp/album/%E8%A6%8B%E4%B8%8A%E3%81%92%E3%81%A6%E3%81%94%E3%82%89%E3%82%93%E5%A4%9C%E3%81%AE%E6%98%9F%E3%82%92/1465042016?i=1465042024",
+      "matched": "見上げてごらん夜の星を — 坂本九（上を向いて歩こう - EP）"
+    },
+    "tsukuru-le-mal-du-pays": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/e9/a5/3d/e9a53de8-d23c-5cb2-8276-86c5a2e77309/00028947963462.rgb.jpg/600x600bb.jpg",
+      "apple_url": "https://music.apple.com/jp/album/%E7%AC%AC1%E5%B9%B4-%E3%82%B9%E3%82%A4%E3%82%B9-s160-%E3%83%8E%E3%82%B9%E3%82%BF%E3%83%AB%E3%82%B8%E3%82%A2-%E3%83%AB-%E3%83%9E%E3%83%AB-%E3%83%87%E3%83%A5-%E3%83%9A%E3%82%A4/1452369669?i=1452370398",
+      "matched": "第1年《スイス》 S160: ノスタルジア(ル・マル・デュ・ペイ) — ラザール・ベルマン（リスト:《巡礼の年》全曲）"
+    },
+    "tsukuru-round-midnight": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music4/v4/49/00/2d/49002d37-68b5-b6ea-243d-e2e152375015/00724353213855.jpg/600x600bb.jpg",
+      "apple_url": "https://music.apple.com/jp/album/round-midnight/723533894?i=723534390",
+      "matched": "'Round Midnight — セロニアス・モンク（Genius of Modern Music (Complete) [Remastered]）"
+    },
+    "tsukuru-viva-las-vegas": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/3e/63/93/3e6393fb-5fe2-1ef4-1c0d-6452919a351c/828768904824.jpg/600x600bb.jpg",
+      "apple_url": "https://music.apple.com/jp/album/viva-las-vegas/217633715?i=217635876",
+      "matched": "Viva Las Vegas — エルヴィス・プレスリー（The Essential Elvis Presley）"
+    },
+    "tsukuru-dont-be-cruel": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/5f/85/be/5f85be9b-5810-456a-189d-313f0eae2f95/886449920068.jpg/600x600bb.jpg",
+      "apple_url": "https://music.apple.com/jp/album/dont-be-cruel/1609685063?i=1609685170",
+      "matched": "Don't Be Cruel — エルヴィス・プレスリー（Elvis 30 #1 Hits (Expanded Edition)）"
+    },
+    "onna-yesterday": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/7d/1d/99/7d1d9988-88df-70cb-3433-896eda047002/23UM1IM18073.rgb.jpg/600x600bb.jpg",
+      "apple_url": "https://music.apple.com/jp/album/yesterday-2023-mix/1713066744?i=1713066893",
+      "matched": "Yesterday (2023 Mix) — ビートルズ（The Beatles 1962–1966 (2023 Edition) [The Red Album]）"
+    },
+    "onna-like-someone-in-love": null,
+    "onna-a-summer-place": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/3b/5c/30/3b5c3089-4c4d-fcf6-cdad-1e9f7858190a/mzi.wryxcbuo.jpg/600x600bb.jpg",
+      "apple_url": "https://music.apple.com/jp/album/theme-from-a-summer-place-single-version/191435770?i=191435788",
+      "matched": "Theme from \"A Summer Place\" (Single Version) — パーシー・フェイス（Percy Faith's Greatest Hits）"
+    },
+    "onna-kino-joshua": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music113/v4/77/d1/05/77d105da-8313-ed8f-f7c2-1bf6e8dad644/00602577593024.rgb.jpg/600x600bb.jpg",
+      "apple_url": "https://music.apple.com/jp/album/%E3%82%B8%E3%82%A7%E3%83%AA%E3%82%B3%E3%81%AE%E6%88%A6%E3%81%84-live-at-the-village-gate-nyc-1962/1456319434?i=1456320337",
+      "matched": "ジェリコの戦い (Live At The Village Gate, NYC, 1962) — コールマン・ホーキンス（Hawkins! Alive! At The Village Gate (Live, 1962 - Expanded Edition)）"
+    },
+    "onna-kino-georgia": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/c3/4e/5c/c34e5c7c-3f5f-2ca9-d496-51640a1434a5/3700551702374.jpg/600x600bb.jpg",
+      "apple_url": "https://music.apple.com/jp/album/georgia-on-my-mind-2002-remaster/1716092362?i=1716092367",
+      "matched": "Georgia on my Mind (2002 - Remaster) — ビリー・ホリデイ（You Go to My Head）"
+    },
+    "onna-kino-moonglow": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/b0/0d/4f/b00d4f02-b6ba-243f-a716-91411e5d0b8d/00888072063198.rgb.jpg/600x600bb.jpg",
+      "apple_url": "https://music.apple.com/jp/album/moonglow/1434609506?i=1434609642",
+      "matched": "Moonglow — エロル・ガーナー（Serenade To \"Laura\"）"
+    },
+    "onna-kino-i-cant-get-started": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music/3f/e6/ac/mzi.jeerkqjv.tif/600x600bb.jpg",
+      "apple_url": "https://music.apple.com/jp/album/i-cant-get-started/385054435?i=385054522",
+      "matched": "I Can't Get Started — バディ・デフランコ（Cooking The Blues & Sweet & Lovely）"
+    },
+    "onna-kino-my-romance": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music4/v4/8b/7b/36/8b7b3610-4443-4619-e37d-4b5097411ac5/AUPCD2693.jpg/600x600bb.jpg",
+      "apple_url": "https://music.apple.com/jp/album/my-romance/911250826?i=911250852",
+      "matched": "My Romance — ベン・ウェブスター & Sweet Edison（Ben Webster & His Allstar Friends）"
+    },
+    "onna-kino-art-tatum": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/fa/2b/54/fa2b5481-45f5-6e00-9180-8dbce5dfbca1/00888072346222.rgb.jpg/600x600bb.jpg",
+      "apple_url": "https://music.apple.com/jp/album/the-art-tatum-solo-masterpieces-vol-1-original-jazz/1442845493",
+      "matched": "アート・テイタム（The Art Tatum Solo Masterpieces, Vol. 1 (Original Jazz Classics Remasters)）"
+    },
+    "dance-fear-of-music": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music/9c/3c/99/mzi.pofqgfsx.jpg/600x600bb.jpg",
+      "apple_url": "https://music.apple.com/jp/album/fear-of-music/300965520",
+      "matched": "Talking Heads（Fear of Music）"
+    },
+    "dance-arthur-prysock": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/5e/6c/87/5e6c87a6-fc95-c6ab-36a9-49141c557b0b/00602547378743.rgb.jpg/600x600bb.jpg",
+      "apple_url": "https://music.apple.com/jp/album/arthur-prysock-count-basie/1444131585",
+      "matched": "Arthur Prysock & カウント・ベイシー（Arthur Prysock/Count Basie）"
+    },
+    "after-dark-english-suites": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/79/45/57/794557d7-35f3-1050-8ea4-391c6414f3d5/00028944557329.rgb.jpg/600x600bb.jpg",
+      "apple_url": "https://music.apple.com/jp/album/bach-english-suites-no-2-3-and-scarlatti-4-sonatas/1452167957",
+      "matched": "イーヴォ・ポゴレリチ（Bach: English Suites No. 2 & 3 and Scarlatti: 4 Sonatas）"
+    },
+    "sekai-mozart-pc23": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/ea/ac/22/eaac225d-dcfd-3295-9fa0-202210aa8edc/8021945004924.jpg/600x600bb.jpg",
+      "apple_url": "https://music.apple.com/jp/album/mozart-piano-concertos-nos-23-27/1569737260",
+      "matched": "ロベール・カサドシュ, コロンビア交響楽団 & ジョージ・セル（Mozart: Piano Concertos Nos. 23 & 27）"
+    },
+    "nw-mozart-pc-casadesus": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music/v4/87/0e/e6/870ee615-cbd8-f4e7-1b45-50d0fa67f6b2/074646303726.jpg/600x600bb.jpg",
+      "apple_url": "https://music.apple.com/jp/album/mozart-piano-concertos/530927978",
+      "matched": "ロベール・カサドシュ, ジョージ・セル & クリーヴランド管弦楽団（Mozart: Piano Concertos）"
+    },
+    "1q84-armstrong-handy": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music71/v4/4a/89/ae/4a89aeb0-a896-c7d2-25ec-51161795d43d/886446157481.jpg/600x600bb.jpg",
+      "apple_url": "https://music.apple.com/jp/album/louis-armstrong-plays-w-c-handy/1165567483",
+      "matched": "ルイ・アームストロング（Louis Armstrong Plays W. C. Handy）"
+    },
+    "slow-boat-inventions": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/42/53/29/4253297f-90f6-336d-5161-e81626bf82f5/886448741701.jpg/600x600bb.jpg",
+      "apple_url": "https://music.apple.com/jp/album/bach-two-and-three-part-inventions-and-sinfonias-bwv-772-801/1538840310",
+      "matched": "グレン・グールド（Bach: Two and Three Part Inventions and Sinfonias, BWV 772-801）"
+    }
+  }
+}

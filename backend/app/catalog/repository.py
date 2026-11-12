@@ -38,10 +38,17 @@ def load_catalog(data_dir: Path) -> Catalog:
         m["key"]: Mood(m["key"], m["label"], tuple(m.get("keywords", ())))
         for m in _read(data_dir / "moods.json")
     }
+    artwork = _read_artwork(data_dir / "artwork.json")
     works = {
-        w["key"]: Work(w["key"], w["title"], int(w["year"]), w["kind"], w["source_url"])
+        w["key"]: Work(
+            w["key"], w["title"], int(w["year"]), w["kind"], w["source_url"],
+            cover_url=(artwork["works"].get(w["key"]) or {}).get("cover_url"),
+        )
         for w in _read(data_dir / "works.json")
     }
+    unknown_works = set(artwork["works"]) - set(works)
+    if unknown_works:
+        raise CatalogError(f"artwork.json: 未定義の作品です: {sorted(unknown_works)}")
 
     songs: list[Song] = []
     seen: set[str] = set()
@@ -65,6 +72,7 @@ def load_catalog(data_dir: Path) -> Catalog:
                 raise CatalogError(f"{sid}: {key} が空です")
 
         work = works[raw["work"]]
+        art = artwork["songs"].get(sid) or {}
         songs.append(
             Song(
                 id=sid,
@@ -78,11 +86,30 @@ def load_catalog(data_dir: Path) -> Catalog:
                 source_url=raw.get("source_url") or work.source_url,
                 story=raw.get("story"),
                 verification=verification,
+                artwork_url=art.get("artwork_url"),
+                apple_url=art.get("apple_url"),
             )
         )
     if not songs:
         raise CatalogError("曲が1件もありません")
+    unknown_songs = set(artwork["songs"]) - seen
+    if unknown_songs:
+        raise CatalogError(f"artwork.json: 未定義の曲です: {sorted(unknown_songs)}")
     return Catalog(moods=moods, works=works, songs=tuple(songs))
+
+
+def _read_artwork(path: Path) -> dict:
+    """画像のURL集。無くても動く（画像なしで表示される）。値が null の項目は「画像なし」の印。"""
+    if not path.exists():
+        return {"works": {}, "songs": {}}
+    with path.open(encoding="utf-8") as f:
+        artwork = json.load(f)
+    for group in ("works", "songs"):
+        for key, entry in artwork.setdefault(group, {}).items():
+            for field, url in (entry or {}).items():
+                if field.endswith("_url") and not str(url).startswith("https://"):
+                    raise CatalogError(f"artwork.json: {key}.{field} は https のURLにしてください")
+    return artwork
 
 
 def _read(path: Path) -> list[dict]:

@@ -21,6 +21,7 @@ class Work:
     year: int
     kind: str  # 長編 / 短編集
     source_url: str
+    cover_url: str | None = None  # 書影（外部サイトの画像URL）
 
 
 @dataclass(frozen=True)
@@ -36,6 +37,8 @@ class Song:
     source_url: str  # この情報の出典ページ
     story: str | None = None  # 短編集の場合の収録短編名
     verification: str = "sourced"  # sourced / partial（曲名や場面が出典で未確認）
+    artwork_url: str | None = None  # ジャケット画像（外部サイトの画像URL）
+    apple_url: str | None = None  # ジャケットの提供元である Apple Music の曲ページ
 
 
 @dataclass(frozen=True)
