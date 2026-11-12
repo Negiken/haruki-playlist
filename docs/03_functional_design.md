@@ -279,14 +279,22 @@ _read():
 
 _validated_picks():   reading.picks を順に見て
     カタログに無い ID      → 捨てる
+    最近出た曲（exclude）  → 捨てる
     既に選んだ ID          → 捨てる
     同じ作品の 3 曲目      → 捨てる
     理由が空               → 既定の理由文を入れる
 
-recommend():
-    採用した曲が count に足りなければ、recommender で不足分を補う
-    （採用済みの曲と、作品ごとの採用数を引き継ぐ）
+recommend(text, count, exclude):
+    候補を max(count, POOL_SIZE=5) 曲ぶん解析器に求める
+    採用した候補が count に足りなければ、recommender で不足分を補う
+    （採用済みの曲と、作品ごとの採用数を引き継ぐ。exclude の曲は選ばない）
+    候補が 1 曲も無ければ（キーワード方式など）、recommender で候補を 5 曲作る
+    候補が count より多ければ、その中から count 曲を抽選する
 ```
+
+**なぜ抽選するか**：解析器は同じ気分にいつも同じ「いちばん合う曲」を返す。画面は 1 曲しか出さないので、そのままだと似た気分（疲れた・眠れない・ひとりで静かに…）のたびに同じ曲になる。合う曲を 5 つ挙げさせ、その中から選ぶことで、気分に合ったまま毎回違う曲が出る。
+
+**最近出た曲**：画面は直近 10 曲の ID をブラウザ（`localStorage`）に覚えておき、`exclude` として送る。サーバーは閲覧者ごとの状態を持たない。
 
 `limits.py`：
 
@@ -305,7 +313,7 @@ recommend():
 
 | メソッド・パス | 内容 |
 |---|---|
-| `POST /api/recommendations` | 本体。`{"text": "…", "count": 1}`（`count` は 1〜8、省略時 1。画面は常に 1 曲） |
+| `POST /api/recommendations` | 本体。`{"text": "…", "count": 1, "exclude": ["曲ID", …]}`（`count` は 1〜8、省略時 1。画面は常に 1 曲。`exclude` は最近出た曲で、省略可・30 件まで） |
 | `GET /api/works` | 収録作品の一覧と曲数（刊行年順） |
 | `GET /api/health` | `{"status","version","songs","llm_enabled"}`。デプロイの動作確認に使う |
 | `GET /*` | `frontend/` の静的ファイル |

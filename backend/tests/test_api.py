@@ -53,10 +53,17 @@ def test_recommendations_with_claude_engine():
     assert body["songs"][0]["id"] == "tsukuru-round-midnight"
     assert body["songs"][0]["reason"] == "真夜中に。"
 
+    again = client.post("/api/recommendations", json={"text": "夜", "exclude": ["tsukuru-round-midnight", "unknown-id"]})
+    assert again.status_code == 200
+    assert again.json()["songs"][0]["id"] != "tsukuru-round-midnight"
+
 
 @pytest.mark.parametrize(
     "payload",
-    [{"text": ""}, {"text": "   "}, {"text": "あ" * 501}, {"text": "ok", "count": 0}, {"text": "ok", "count": 99}, {}],
+    [
+        {"text": ""}, {"text": "   "}, {"text": "あ" * 501}, {"text": "ok", "count": 0}, {"text": "ok", "count": 99}, {},
+        {"text": "ok", "exclude": ["x"] * 31},
+    ],
 )
 def test_invalid_requests_are_rejected(client, payload):
     assert client.post("/api/recommendations", json=payload).status_code == 422

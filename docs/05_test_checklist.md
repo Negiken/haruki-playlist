@@ -36,6 +36,9 @@
 |---|---|
 | `test_uses_claude_picks_in_order` | Claude の選曲と理由をその順で採用する |
 | `test_invalid_duplicate_and_overconcentrated_picks_are_dropped_then_topped_up` | 存在しない ID・重複・同一作品 3 曲目を捨て、不足分を補う |
+| `test_one_song_is_drawn_from_the_candidates_not_always_the_first` | 1 曲のときは候補 5 曲から抽選し、先頭の曲ばかりにならない |
+| `test_excluded_songs_are_never_returned` | 最近出た曲は返さない。候補が全部それなら別の曲を探す |
+| `test_rules_engine_also_draws_from_several_candidates` | キーワード方式でも同じ気分で複数の曲が出る |
 | `test_falls_back_to_rules_when_claude_fails` | Claude が失敗したらキーワード方式で応答する |
 | `test_falls_back_to_rules_when_daily_budget_is_exhausted` | 1 日の上限を超えたら Claude を呼ばない |
 | `test_without_primary_uses_rules` | API キーなしの構成で動く |
@@ -56,9 +59,9 @@
 | テスト | 確認していること |
 |---|---|
 | `test_health` / `test_works_lists_all_twelve` | 補助エンドポイント |
-| `test_recommendations_with_rules` | 5 曲と、出典・場面・理由・リンクが返る |
-| `test_recommendations_with_claude_engine` | Claude 方式の結果がそのまま返る |
-| `test_invalid_requests_are_rejected` ×6 | 空・空白のみ・501 文字・曲数 0・曲数 99・本文なし を 422 にする |
+| `test_recommendations_with_rules` | 既定で 1 曲と、出典・場面・理由・リンク・画像の項目が返る |
+| `test_recommendations_with_claude_engine` | Claude 方式の結果がそのまま返る。`exclude` に入れた曲は返らない |
+| `test_invalid_requests_are_rejected` ×7 | 空・空白のみ・501 文字・曲数 0・曲数 99・本文なし・`exclude` 31 件 を 422 にする |
 | `test_rate_limit_is_per_viewer_ip` | `X-Forwarded-For` の末尾で数え、先頭の偽装に影響されない |
 | `test_frontend_is_served` | トップページが返る |
 

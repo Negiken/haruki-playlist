@@ -26,19 +26,39 @@ const textarea = $("mood-text");
 const submit = $("submit");
 const statusEl = $("status");
 
+// ---- 最近出た曲 ----
+// 続けて同じ曲が出ないよう、このブラウザで最近出た曲を覚えておき、選曲から外してもらう。
+// 保存できない環境（プライベートウィンドウなど）では、ページを開いている間だけ覚える。
+
+const RECENT_KEY = "haruki-playlist.recent";
+const RECENT_MAX = 10;
+let recentIds = [];
+try {
+  const saved = JSON.parse(localStorage.getItem(RECENT_KEY) ?? "[]");
+  if (Array.isArray(saved)) recentIds = saved.filter((id) => typeof id === "string").slice(0, RECENT_MAX);
+} catch {}
+
+function remember(songId) {
+  recentIds = [songId, ...recentIds.filter((id) => id !== songId)].slice(0, RECENT_MAX);
+  try {
+    localStorage.setItem(RECENT_KEY, JSON.stringify(recentIds));
+  } catch {}
+}
+
 // ---- API ----
 
 async function requestSong(text) {
   const res = await fetch("/api/recommendations", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ text, count: 1 }),
+    body: JSON.stringify({ text, count: 1, exclude: recentIds }),
   });
   if (res.status === 429) throw new Error("リクエストが続いています。1分ほど待ってから、もう一度お試しください。");
   if (res.status === 422) throw new Error("気分を1〜500文字で書いてください。");
   if (!res.ok) throw new Error("うまく選べませんでした。少し時間をおいて、もう一度お試しください。");
   const data = await res.json();
   if (!data.songs.length) throw new Error("うまく選べませんでした。少し時間をおいて、もう一度お試しください。");
+  remember(data.songs[0].id);
   return data;
 }
 

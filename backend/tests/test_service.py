@@ -54,6 +54,39 @@ def test_invalid_duplicate_and_overconcentrated_picks_are_dropped_then_topped_up
     assert sum(1 for r in result.recommendations if r.song.work.key == "after_dark") == 2
 
 
+FIVE_PICKS = tuple(
+    Pick(song_id, "r")
+    for song_id in ("sekai-mozart-pc23", "nw-julia", "dance-arthur-prysock", "kafka-archduke-trio", "onna-kino-my-romance")
+)
+
+
+def test_one_song_is_drawn_from_the_candidates_not_always_the_first(catalog):
+    primary = FakeAnalyzer(MoodReading("要約", {"tired": 1.0}, FIVE_PICKS))
+    service = _service(catalog, primary)
+    drawn = {service.recommend("疲れた", 1).recommendations[0].song.id for _ in range(40)}
+    assert len(drawn) >= 3
+    assert drawn <= {p.song_id for p in FIVE_PICKS}
+
+
+def test_excluded_songs_are_never_returned(catalog):
+    primary = FakeAnalyzer(MoodReading("要約", {"tired": 1.0}, FIVE_PICKS))
+    service = _service(catalog, primary)
+    recent = [p.song_id for p in FIVE_PICKS[:4]]
+    for _ in range(10):
+        assert service.recommend("疲れた", 1, recent).recommendations[0].song.id == "onna-kino-my-romance"
+
+    everything = [p.song_id for p in FIVE_PICKS]  # 候補が全部最近の曲なら、気分の重みで別の曲を探す
+    result = service.recommend("疲れた", 1, everything)
+    assert len(result.recommendations) == 1
+    assert result.recommendations[0].song.id not in everything
+
+
+def test_rules_engine_also_draws_from_several_candidates(catalog):
+    service = _service(catalog)
+    drawn = {service.recommend("疲れた", 1).recommendations[0].song.id for _ in range(40)}
+    assert len(drawn) >= 3
+
+
 def test_falls_back_to_rules_when_claude_fails(catalog):
     primary = FakeAnalyzer(error=AnalyzerError("connection"))
     result = _service(catalog, primary).recommend("雨の日でしんみり", 5)

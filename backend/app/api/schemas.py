@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+from typing import Annotated
 from urllib.parse import quote_plus
 
 from pydantic import BaseModel, Field, field_validator
@@ -12,11 +13,14 @@ from ..domain.models import Recommendation, RecommendationResult
 MAX_TEXT_CHARS = 500
 DEFAULT_COUNT = 1  # 画面は一度に一曲だけ出す
 MAX_COUNT = 8
+MAX_EXCLUDE = 30
 
 
 class RecommendationRequest(BaseModel):
     text: str = Field(max_length=MAX_TEXT_CHARS)
     count: int = Field(default=DEFAULT_COUNT, ge=1, le=MAX_COUNT)
+    # 最近出た曲のID。続けて同じ曲が出ないよう、画面が覚えていて送ってくる
+    exclude: list[Annotated[str, Field(max_length=80)]] = Field(default_factory=list, max_length=MAX_EXCLUDE)
 
     @field_validator("text")
     @classmethod

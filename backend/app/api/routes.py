@@ -58,6 +58,6 @@ def build_router(
     def recommendations(body: RecommendationRequest, request: Request) -> RecommendationResponse:
         if not limiter.allow(client_ip(request)):
             raise HTTPException(status_code=429, detail="少し時間をおいてから、もう一度お試しください。")
-        return to_response(service.recommend(body.text, body.count), catalog)
+        return to_response(service.recommend(body.text, body.count, body.exclude), catalog)
 
     return router
