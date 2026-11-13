@@ -43,6 +43,22 @@
     "onna_no_inai": {
       "cover_url": "https://covers.openlibrary.org/b/id/8818031-L.jpg",
       "edition": "英語版（日本語版の書影が Open Library に無いため）"
+    },
+    "kaze": {
+      "cover_url": "https://covers.openlibrary.org/b/id/15099453-L.jpg",
+      "edition": "講談社英語文庫（日本語版の書影が Open Library に無いため）"
+    },
+    "pinball": {
+      "cover_url": "https://covers.openlibrary.org/b/id/9922899-L.jpg",
+      "edition": "講談社文庫"
+    },
+    "kokkyo": {
+      "cover_url": "https://covers.openlibrary.org/b/id/12076256-L.jpg",
+      "edition": "講談社文庫"
+    },
+    "kishidan": {
+      "cover_url": "https://covers.openlibrary.org/b/isbn/9784103534327-L.jpg",
+      "edition": "新潮社 単行本（第1部）"
     }
   },
   "songs": {
@@ -551,6 +567,170 @@
       "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/42/53/29/4253297f-90f6-336d-5161-e81626bf82f5/886448741701.jpg/600x600bb.jpg",
       "apple_url": "https://music.apple.com/jp/album/bach-two-and-three-part-inventions-and-sinfonias-bwv-772-801/1538840310",
       "matched": "グレン・グールド（Bach: Two and Three Part Inventions and Sinfonias, BWV 772-801）"
-    }
+    },
+    "kaze-rainy-night-in-georgia": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/8a/6b/fc/8a6bfc7a-6122-a6ba-68b5-0f44838e26db/s06.urznpkdw.jpg/600x600bb.jpg",
+      "apple_url": "https://music.apple.com/jp/album/rainy-night-in-georgia/40459650?i=40459652",
+      "matched": "Rainy Night In Georgia — Brook Benton（Today）"
+    },
+    "kaze-wholl-stop-the-rain": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/f3/81/ca/f381ca2b-0779-4102-2c64-8b2563eedb96/00888072355996.rgb.jpg/600x600bb.jpg",
+      "apple_url": "https://music.apple.com/jp/album/wholl-stop-the-rain/1440948745?i=1440949341",
+      "matched": "Who'll Stop the Rain — クリーデンス・クリアウォーター・リヴァイヴァル（Cosmo's Factory）"
+    },
+    "kaze-california-girls": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/1a/6c/bb/1a6cbbe1-e435-4c5f-fa2e-e3c07c433ead/13UABIM03828.rgb.jpg/600x600bb.jpg",
+      "apple_url": "https://music.apple.com/jp/album/california-girls-mono/1443106500?i=1443106708",
+      "matched": "California Girls (Mono) — ザ・ビーチ・ボーイズ（Summer Days (And Summer Nights!!) (Mono & Stereo) [2001 Remaster]）"
+    },
+    "kaze-beethoven-pc3": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music1/v4/80/d1/ed/80d1ede2-cb74-fd7a-880c-8a7ba7f95928/886445060218.jpg/600x600bb.jpg",
+      "apple_url": "https://music.apple.com/jp/album/beethoven-piano-concerto-no-3-in-c-minor-op-37/1004912817",
+      "matched": "グレン・グールド, コロンビア交響楽団 & レナード・バーンスタイン（Beethoven: Piano Concerto No. 3 in C Minor, Op. 37）"
+    },
+    "kaze-nashville-skyline": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Features124/v4/3f/1a/ad/3f1aad23-1f92-4d66-0ca7-d835c3f79b6b/dj.mtxlnrdd.jpg/600x600bb.jpg",
+      "apple_url": "https://music.apple.com/jp/album/nashville-skyline-rag/177980677?i=177980792",
+      "matched": "Nashville Skyline Rag — ボブ・ディラン（Nashville Skyline）"
+    },
+    "kaze-return-to-sender": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/1d/99/51/1d995175-a260-0e16-4c67-1d37bf375712/886447166550.jpg/600x600bb.jpg",
+      "apple_url": "https://music.apple.com/jp/album/return-to-sender-from-girls-girls-girls/1404495425?i=1404495776",
+      "matched": "Return to Sender (From \"Girls! Girls! Girls!\") — エルヴィス・プレスリー（Love Me Tender: The Greatest Hits）"
+    },
+    "kaze-woodstock": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Features2/v4/65/d2/17/65d217a9-a3e7-271f-93ba-6b5918f1fa0e/dj.uqndsgvp.jpg/600x600bb.jpg",
+      "apple_url": "https://music.apple.com/jp/album/woodstock/128076661?i=128076186",
+      "matched": "Woodstock — ジョニ・ミッチェル（Hits）"
+    },
+    "kaze-spirit-in-the-sky": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/91/78/c8/9178c88b-ff65-6e4b-f8af-a5ab0c938b53/14UMDIM02986.rgb.jpg/600x600bb.jpg",
+      "apple_url": "https://music.apple.com/jp/album/spirit-in-the-sky/1462211353?i=1462211356",
+      "matched": "Spirit In the Sky — ノーマン・グリーンバウム（Spirit In the Sky (Deluxe Edition)）"
+    },
+    "kaze-hey-there-lonely-girl": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/88/8c/9e/888c9e98-b355-b3cf-6d0e-b4ad33cda5e1/00602557127379.rgb.jpg/600x600bb.jpg",
+      "apple_url": "https://music.apple.com/jp/album/hey-there-lonely-girl/1442268004?i=1442269002",
+      "matched": "Hey There Lonely Girl — Eddie Holman（I Love You）"
+    },
+    "kaze-dont-think-twice": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/3d/58/d8/3d58d869-6085-577c-8d6c-cc85b85e9271/075992622462.jpg/600x600bb.jpg",
+      "apple_url": "https://music.apple.com/jp/album/%E3%81%8F%E3%82%88%E3%81%8F%E3%82%88%E3%81%99%E3%82%8B%E3%81%AA%E3%82%88/357901511?i=357903457",
+      "matched": "くよくよするなよ — Peter, Paul & Mary（In the Wind）"
+    },
+    "kaze-good-luck-charm": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/5f/85/be/5f85be9b-5810-456a-189d-313f0eae2f95/886449920068.jpg/600x600bb.jpg",
+      "apple_url": "https://music.apple.com/jp/album/good-luck-charm/1609685063?i=1609685260",
+      "matched": "Good Luck Charm — エルヴィス・プレスリー（Elvis 30 #1 Hits (Expanded Edition)）"
+    },
+    "pinball-hello-mary-lou": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music6/v4/35/a6/9f/35a69f25-d09e-204b-25d1-c8a228f68ef9/00077779521951.jpg/600x600bb.jpg",
+      "apple_url": "https://music.apple.com/jp/album/hello-mary-lou/724265365?i=724265608",
+      "matched": "Hello Mary Lou — リッキー・ネルソン（The Best of Rick Nelson, Vol. 2）"
+    },
+    "pinball-penny-lane": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/43/0e/37/430e3790-75d5-c96a-1380-f9d9803aa700/18UMGIM31245.rgb.jpg/600x600bb.jpg",
+      "apple_url": "https://music.apple.com/jp/album/%E3%83%9A%E3%83%8B%E3%83%BC-%E3%83%AC%E3%82%A4%E3%83%B3-2009-remaster/1441163490?i=1441163777",
+      "matched": "ペニー・レイン (2009 - Remaster) — ビートルズ（Magical Mystery Tour）"
+    },
+    "pinball-its-so-peaceful": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/16/4b/44/164b4429-7f58-55f6-6cc8-5ae83b3ef6f1/3661318039952.jpg/600x600bb.jpg",
+      "apple_url": "https://music.apple.com/jp/album/its-so-peaceful-in-the-country/1888838853?i=1888839155",
+      "matched": "It's So Peaceful In the Country — ミルドレッド・ベイリー（Mildred Bailey, Mrs Swing）"
+    },
+    "pinball-macarthur-park": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/5e/22/05/5e22053a-224d-f64d-e7a0-a08965db78c9/00008811078027.rgb.jpg/600x600bb.jpg",
+      "apple_url": "https://music.apple.com/jp/album/macarthur-park/1444189552?i=1444189696",
+      "matched": "MacArthur Park — リチャード・ハリス（A Tramp Shining）"
+    },
+    "dance-hit-the-road-jack": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music4/v4/3e/3c/bc/3e3cbc92-7781-ee13-3eea-9156f73fc0a9/cover.jpg/600x600bb.jpg",
+      "apple_url": "https://music.apple.com/jp/album/hit-the-road-jack-feat-the-raelets/903334776?i=903334778",
+      "matched": "Hit the Road Jack (feat. The Raelets) — レイ・チャールズ（Hit the Road Jack / The Danger Zone (Mono Version) - EP）"
+    },
+    "kokkyo-pretend": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/4e/92/0b/4e920b65-26fe-c608-d4a0-605cb1cfeca9/16UMGIM31150.rgb.jpg/600x600bb.jpg",
+      "apple_url": "https://music.apple.com/jp/album/pretend/1444030068?i=1444030881",
+      "matched": "Pretend — ナット・キング・コール（Unforgettable）"
+    },
+    "kokkyo-south-of-the-border": null,
+    "kokkyo-star-crossed-lovers": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music1/v4/9e/ce/30/9ece309d-9561-0dbd-6ac5-8de383283f43/886445222494.jpg/600x600bb.jpg",
+      "apple_url": "https://music.apple.com/jp/album/the-star-crossed-lovers-aka-pretty-girl/999653167?i=999653181",
+      "matched": "The Star-Crossed Lovers (aka Pretty Girl) — デューク・エリントン（Such Sweet Thunder）"
+    },
+    "kokkyo-burning-down-the-house": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/81/22/d3/8122d33b-2334-44a3-1990-b80d80dd522d/mzi.jmjoreqd.jpg/600x600bb.jpg",
+      "apple_url": "https://music.apple.com/jp/album/burning-down-the-house-2005-remastered/124923817?i=124922197",
+      "matched": "Burning Down the House (2005 Remastered) — Talking Heads（Speaking In Tongues (Bonus Track Version)）"
+    },
+    "1q84-thomas-crown": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music/40/ef/0d/mzi.ymqnsxmf.tif/600x600bb.jpg",
+      "apple_url": "https://music.apple.com/jp/album/the-windmills-of-your-mind-theme-from-the/506828709?i=506828734",
+      "matched": "The Windmills of Your Mind (Theme from \"The Thomas Crown Affair\") — ミシェル・ルグラン（The Very Best of Michel Legrand）"
+    },
+    "kishidan-rosenkavalier": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/f1/1c/5d/f11c5d24-5256-1f0d-c884-8f2be44219c2/00028947599883.rgb.jpg/600x600bb.jpg",
+      "apple_url": "https://music.apple.com/jp/album/strauss-r-der-rosenkavalier/1452147243",
+      "matched": "レジーヌ・クレスパン, イヴォンヌ・ミントン, マンフレート・ユングヴィルト, ウィーン・フィルハーモニー管弦楽団 & サー・ゲオルク・ショルティ（Strauss, R.: Der Rosenkavalier）"
+    },
+    "kishidan-schubert-sq15": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/0d/c0/c4/0dc0c48f-78db-4689-2e70-7d984b6bb5c8/5903600324161.jpg/600x600bb.jpg",
+      "apple_url": "https://music.apple.com/jp/album/schubert-complete-string-quartets-death-and-the/1889022428",
+      "matched": "Wiener Konzerthausquartett（Schubert: Complete String Quartets ''Death and the Maiden'' (Remastered 2021)）"
+    },
+    "kishidan-turandot": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music/v4/bc/2f/50/bc2f5090-2631-b1a5-c3ab-e3ec691e3bc8/077776932750.jpg/600x600bb.jpg",
+      "apple_url": "https://music.apple.com/jp/album/turandot-1988-remastered-version-act-i-non-piangere/697246824?i=697247612",
+      "matched": "Turandot (1988 Remastered Version), Act I: Non piangere, Liù (Calaf, Liù, Timur) — レナータ・スコット, ローマ歌劇場管弦楽団, フランチェスコ・モリナーリ=プラデルリ & フランコ・コレルリ（Puccini - Turandot）"
+    },
+    "kishidan-la-boheme": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/58/0b/c4/580bc441-c702-8302-dad9-2422cdd7e945/00028944872521.rgb.jpg/600x600bb.jpg",
+      "apple_url": "https://music.apple.com/jp/album/puccini-la-boh%C3%A8me/1452231607",
+      "matched": "レナータ・テバルディ, カルロ・ベルゴンツィ, サンタ・チェチーリア国立アカデミー合唱団, エットレ・バスティアニーニ, サンタ・チェチーリア国立アカデミー管弦楽団 & トゥリオ・セラフィン（Puccini: La Bohème）"
+    },
+    "kishidan-pyramid": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music4/v4/59/20/56/59205681-e80c-8e0d-d0cb-f1843274c55a/cover.jpg/600x600bb.jpg",
+      "apple_url": "https://music.apple.com/jp/album/pyramid/681097165?i=681097168",
+      "matched": "Pyramid — モダン・ジャズ・カルテット（Pyramid (Original Album Plus Bonus Tracks 1959)）"
+    },
+    "kishidan-fool-on-the-hill": null,
+    "kishidan-the-doors": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/97/e2/ce/97e2ce16-02e1-54f6-3896-dcc55249ff7d/603497838738.jpg/600x600bb.jpg",
+      "apple_url": "https://music.apple.com/jp/album/the-doors/1622368510",
+      "matched": "ドアーズ（The Doors）"
+    },
+    "kishidan-the-river": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/ac/29/8f/ac298fbd-fa23-e8de-09d7-dec9c977f912/074643685429.jpg/600x600bb.jpg",
+      "apple_url": "https://music.apple.com/jp/album/the-river/186064796",
+      "matched": "ブルース・スプリングスティーン（The River）"
+    },
+    "kishidan-look-of-love": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/41/99/4d/41994d04-d8f0-ca92-0cb3-ec4f931ed75b/06UMGIM47803.rgb.jpg/600x600bb.jpg",
+      "apple_url": "https://music.apple.com/jp/album/the-look-of-love-pt-1/1440920887?i=1440921183",
+      "matched": "The Look of Love, Pt. 1 — ABC（The Lexicon of Love）"
+    },
+    "kishidan-key-largo": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/f7/8c/21/f78c218f-7f42-9d9d-0650-d09bd7cdddae/Key_Largo_Bertie_Higgins.jpeg/600x600bb.jpg",
+      "apple_url": "https://music.apple.com/jp/album/key-largo-original-45-version/540917862?i=540917863",
+      "matched": "Key Largo (Original 45 Version) — バーティ・ヒギンズ（Key Largo (Original 45 Version) - Single）"
+    },
+    "kishidan-time-is-on-my-side": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/f4/99/f8/f499f82e-009c-25d8-56e0-a8d1a5fe1433/13ABKIM00009.rgb.jpg/600x600bb.jpg",
+      "apple_url": "https://music.apple.com/jp/album/time-is-on-my-side/1440764560?i=1440764699",
+      "matched": "Time Is On My Side — ザ・ローリング・ストーンズ（12 x 5）"
+    },
+    "kishidan-monks-music": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/0e/62/97/0e629747-6745-6318-c76e-29f67454d358/00025218608428.rgb.jpg/600x600bb.jpg",
+      "apple_url": "https://music.apple.com/jp/album/monks-music-remastered/1440565683",
+      "matched": "セロニアス・モンク（Monk's Music (Remastered)）"
+    },
+    "kishidan-roberta-donny": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/71/cc/9a/71cc9a45-66ce-82c5-c568-fecba44a5b41/mzi.vfyoajjg.jpg/600x600bb.jpg",
+      "apple_url": "https://music.apple.com/jp/album/roberta-flack-donny-hathaway/120156856",
+      "matched": "Roberta Flack & Donny Hathaway（Roberta Flack & Donny Hathaway）"
+    },
+    "sekai-bruckner": null,
+    "kishidan-tuesday-night-music-club": null
   }
 }

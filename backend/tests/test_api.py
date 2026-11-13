@@ -20,9 +20,9 @@ def test_health(client):
     assert body["llm_enabled"] is False
 
 
-def test_works_lists_all_twelve(client):
+def test_works_lists_every_work(client):
     works = client.get("/api/works").json()
-    assert len(works) == 12
+    assert len(works) == 16
     assert all(w["song_count"] > 0 for w in works)
     assert [w["year"] for w in works] == sorted(w["year"] for w in works)
 

@@ -12,7 +12,7 @@
 
 | テスト | 確認していること |
 |---|---|
-| `test_real_catalog_loads` | 本物のデータが読める。90 曲以上・12 作品 |
+| `test_real_catalog_loads` | 本物のデータが読める。90 曲以上・16 作品 |
 | `test_every_work_has_songs` | どの作品にも 3 曲以上ある |
 | `test_every_mood_is_used_by_enough_songs` | どの気分にも 5 曲以上ある（選べる曲が無い気分を作らない） |
 | `test_every_song_has_a_source` | 全曲に出典 URL がある |
@@ -58,7 +58,7 @@
 
 | テスト | 確認していること |
 |---|---|
-| `test_health` / `test_works_lists_all_twelve` | 補助エンドポイント |
+| `test_health` / `test_works_lists_every_work` | 補助エンドポイント |
 | `test_recommendations_with_rules` | 既定で 1 曲と、出典・場面・理由・リンク・画像の項目が返る |
 | `test_recommendations_with_claude_engine` | Claude 方式の結果がそのまま返る。`exclude` に入れた曲は返らない |
 | `test_invalid_requests_are_rejected` ×7 | 空・空白のみ・501 文字・曲数 0・曲数 99・本文なし・`exclude` 31 件 を 422 にする |

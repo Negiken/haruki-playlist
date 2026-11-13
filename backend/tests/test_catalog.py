@@ -9,7 +9,7 @@ from app.config import BACKEND_DIR
 
 def test_real_catalog_loads(catalog):
     assert len(catalog.songs) >= 90
-    assert len(catalog.works) == 12
+    assert len(catalog.works) == 16
 
 
 def test_every_work_has_songs(catalog):

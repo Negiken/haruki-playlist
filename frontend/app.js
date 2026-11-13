@@ -6,11 +6,14 @@ const GENRE_LABELS = { jazz: "Jazz", pop: "Rock / Pop", classical: "Classical", 
 
 // B面は出典の小説の色に染まる。装丁から拾った色で、白地の上で文字として読める濃さにしてある。
 const WORK_COLORS = {
+  kaze: "#1f7f86",
+  pinball: "#a23b72",
   hitsuji: "#b8501c",
   slow_boat: "#1d5fa8",
   sekai_no_owari: "#b8334f",
   norwegian_wood: "#1f6b4f",
   dance: "#2459c4",
+  kokkyo: "#4b4a8f",
   nejimaki: "#1f3f8f",
   sputnik: "#a45a2a",
   kafka: "#3f6fa8",
@@ -18,6 +21,7 @@ const WORK_COLORS = {
   "1q84": "#3a7d34",
   tsukuru: "#63676e",
   onna_no_inai: "#8f6a08",
+  kishidan: "#7a2e2e",
 };
 
 const $ = (id) => document.getElementById(id);

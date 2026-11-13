@@ -83,7 +83,7 @@ pytest -q
 3. `pytest -q` を実行する。書式や key の間違いはここで分かる
 4. `main` に push すれば自動で公開される
 
-作品を増やす場合は `works.json` に 1 行足し、`tests/test_catalog.py` の作品数（12）を直す。
+作品を増やす場合は `works.json` に 1 行足し、`tests/test_catalog.py` の作品数（16）を直し、`frontend/app.js` の `WORK_COLORS` にその作品の色を足す。
 
 ---
 

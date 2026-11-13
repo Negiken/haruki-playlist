@@ -90,7 +90,7 @@ POST /api/recommendations {text}
 │   │   └── main.py                    部品を組み立てるだけ
 │   ├── data/
 │   │   ├── songs.json                 曲カタログ
-│   │   ├── works.json                 対象 12 作品
+│   │   ├── works.json                 対象 16 作品
 │   │   ├── moods.json                 気分の語彙とキーワード
 │   │   └── artwork.json               書影とジャケットの画像URL（無くても動く）
 │   ├── tests/

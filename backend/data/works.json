@@ -1,14 +1,18 @@
 [
+  {"key": "kaze", "title": "風の歌を聴け", "year": 1979, "kind": "長編", "source_url": "https://ja.wikipedia.org/wiki/風の歌を聴け"},
+  {"key": "pinball", "title": "1973年のピンボール", "year": 1980, "kind": "長編", "source_url": "https://ja.wikipedia.org/wiki/1973年のピンボール"},
   {"key": "hitsuji", "title": "羊をめぐる冒険", "year": 1982, "kind": "長編", "source_url": "https://ja.wikipedia.org/wiki/羊をめぐる冒険"},
   {"key": "slow_boat", "title": "中国行きのスロウ・ボート", "year": 1983, "kind": "短編集", "source_url": "https://ja.wikipedia.org/wiki/中国行きのスロウ・ボート"},
   {"key": "sekai_no_owari", "title": "世界の終りとハードボイルド・ワンダーランド", "year": 1985, "kind": "長編", "source_url": "https://ja.wikipedia.org/wiki/世界の終りとハードボイルド・ワンダーランド"},
   {"key": "norwegian_wood", "title": "ノルウェイの森", "year": 1987, "kind": "長編", "source_url": "https://ja.wikipedia.org/wiki/ノルウェイの森"},
   {"key": "dance", "title": "ダンス・ダンス・ダンス", "year": 1988, "kind": "長編", "source_url": "https://ja.wikipedia.org/wiki/ダンス・ダンス・ダンス"},
+  {"key": "kokkyo", "title": "国境の南、太陽の西", "year": 1992, "kind": "長編", "source_url": "https://ja.wikipedia.org/wiki/国境の南、太陽の西"},
   {"key": "nejimaki", "title": "ねじまき鳥クロニクル", "year": 1994, "kind": "長編", "source_url": "https://ja.wikipedia.org/wiki/ねじまき鳥クロニクル"},
   {"key": "sputnik", "title": "スプートニクの恋人", "year": 1999, "kind": "長編", "source_url": "https://ja.wikipedia.org/wiki/スプートニクの恋人"},
   {"key": "kafka", "title": "海辺のカフカ", "year": 2002, "kind": "長編", "source_url": "https://ja.wikipedia.org/wiki/海辺のカフカ"},
   {"key": "after_dark", "title": "アフターダーク", "year": 2004, "kind": "長編", "source_url": "https://ja.wikipedia.org/wiki/アフターダーク"},
   {"key": "1q84", "title": "1Q84", "year": 2009, "kind": "長編", "source_url": "https://ja.wikipedia.org/wiki/1Q84"},
   {"key": "tsukuru", "title": "色彩を持たない多崎つくると、彼の巡礼の年", "year": 2013, "kind": "長編", "source_url": "https://ja.wikipedia.org/wiki/色彩を持たない多崎つくると、彼の巡礼の年"},
-  {"key": "onna_no_inai", "title": "女のいない男たち", "year": 2014, "kind": "短編集", "source_url": "https://ja.wikipedia.org/wiki/女のいない男たち"}
+  {"key": "onna_no_inai", "title": "女のいない男たち", "year": 2014, "kind": "短編集", "source_url": "https://ja.wikipedia.org/wiki/女のいない男たち"},
+  {"key": "kishidan", "title": "騎士団長殺し", "year": 2017, "kind": "長編", "source_url": "https://ja.wikipedia.org/wiki/騎士団長殺し"}
 ]
