@@ -254,13 +254,14 @@ count 曲そろったら終了
 
 ### 4.3 Claude 方式（`mood/claude.py`）
 
-* モデル：`claude-haiku-5-5`（環境変数 `HARUKI_MODEL` で変更可）、`effort: low`
+* モデル：`claude-haiku-5-5`（環境変数 `HARUKI_MODEL` で変更可）、`effort: low`、思考（thinking）は無効
+* **書かせる量を最小にする**：応答時間のほとんどは Claude が文字を書く時間なので、画面に出さない要約文と選曲理由は書かせない。要約は気分タグから組み立て、理由は既定の文を入れる
 * **システムプロンプト**＝指示文＋気分語彙＋カタログ全曲（`id | 曲名 | アーティスト | 作品 | 気分タグ | 場面`）。毎回同一の文字列なので**プロンプトキャッシュ**が効く（`cache_control: ephemeral`）
 * **ユーザーメッセージ**＝入力文と曲数だけ。可変部分をキャッシュ対象の後ろに置く
 * **構造化出力**（`messages.parse` ＋ Pydantic）で次の形を保証させる
 
 ```python
-{ "summary": str, "moods": [str], "picks": [{ "song_id": str, "reason": str }] }
+{ "moods": [str], "picks": [str] }   # picks は曲 ID を合う順に
 ```
 
 * タイムアウト 20 秒・再試行 1 回（最長 40 秒ほど。CloudFront のオリジン待ち時間 60 秒より短くしてある）。認証エラー／レート制限／その他の API エラー／接続エラー／`stop_reason` が `end_turn` 以外（拒否・途中切れ）は、すべて `AnalyzerError` に変換する

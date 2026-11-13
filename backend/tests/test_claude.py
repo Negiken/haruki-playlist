@@ -5,7 +5,7 @@ import httpx2
 import pytest
 
 from app.mood.analyzer import AnalyzerError
-from app.mood.claude import ClaudeAnalyzer, _PickOut, _ReadingOut, build_system_prompt
+from app.mood.claude import ClaudeAnalyzer, _ReadingOut, build_system_prompt
 
 
 class FakeMessages:
@@ -38,21 +38,17 @@ def test_system_prompt_is_deterministic_and_lists_every_song(catalog):
 
 
 def test_read_maps_structured_output(catalog):
-    parsed = _ReadingOut(
-        summary=" 静かな夜ですね。 ",
-        moods=["night", "unknown-mood", "lonely"],
-        picks=[_PickOut(song_id="after-dark-five-spot", reason="深夜に合います。" + "あ" * 500)],
-    )
+    parsed = _ReadingOut(moods=["night", "unknown-mood", "lonely"], picks=["after-dark-five-spot", "nw-julia"])
     messages = FakeMessages(_response(parsed=parsed))
     reading = _analyzer(catalog, messages).read("眠れない", 5)
 
-    assert reading.summary == "静かな夜ですね。"
+    assert reading.summary == "「深夜」「孤独」の気分として受け取りました。"
     assert reading.weights == {"night": 2.0, "lonely": 1.0}
-    assert reading.picks[0].song_id == "after-dark-five-spot"
-    assert len(reading.picks[0].reason) <= 200
+    assert [p.song_id for p in reading.picks] == ["after-dark-five-spot", "nw-julia"]
 
     sent = messages.kwargs
     assert sent["model"] == "claude-haiku-5-5"
+    assert sent["thinking"] == {"type": "disabled"}  # 応答時間のため。書かせる量を最小にする
     assert sent["system"][0]["cache_control"] == {"type": "ephemeral"}
     assert "眠れない" in sent["messages"][0]["content"]
     assert "眠れない" not in sent["system"][0]["text"]  # 可変部分はキャッシュ対象の外

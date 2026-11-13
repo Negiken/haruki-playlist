@@ -50,7 +50,7 @@
 | テスト | 確認していること |
 |---|---|
 | `test_system_prompt_is_deterministic_and_lists_every_song` | プロンプトが毎回同一で、全曲・全気分を含む |
-| `test_read_maps_structured_output` | 応答の変換（未知の気分を捨てる、理由を 200 字に切る）。入力文がキャッシュ対象に混ざらない |
+| `test_read_maps_structured_output` | 応答の変換（未知の気分を捨てる、要約を気分タグから組み立てる）。思考を無効にして送る。入力文がキャッシュ対象に混ざらない |
 | `test_unusable_response_raises` ×2 | 拒否・途中切れを失敗として扱う |
 | `test_api_errors_are_wrapped` | 接続エラーを `AnalyzerError` に変換する |
 
